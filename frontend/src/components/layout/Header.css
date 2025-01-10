@@ -1,0 +1,32 @@
+/* Styl dla kontenera nagłówka */
+header {
+    background-color: #333;      /* Tło w ciemnym kolorze */
+    color: #fff;                 /* Kolor tekstu na biały */
+    padding: 20px;               /* Odstępy wewnętrzne */
+    display: flex;               /* Flexbox do ustawiania elementów w jednym wierszu */
+    justify-content: space-between; /* Równo rozmieszczone elementy */
+    align-items: center;         /* Wyrównanie do środka w osi pionowej */
+  }
+  
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  header nav {
+    display: flex;
+  }
+  
+  header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  header nav a:hover {
+    background-color: #444; /* Zmiana tła przy najechaniu */
+  }
+  
