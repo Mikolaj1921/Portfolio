@@ -1,0 +1,31 @@
+/* Styl dla elementu Aside */
+aside {
+    background-color: #f4f4f4;    /* Jasne tło */
+    padding: 20px;                /* Odstępy wewnętrzne */
+    border-left: 3px solid #ccc;  /* Lewa ramka */
+    margin-top: 20px;             /* Odstęp od góry */
+  }
+  
+  aside h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  aside ul {
+    list-style-type: none;         /* Usunięcie punktów listy */
+    padding: 0;
+  }
+  
+  aside ul li {
+    margin-bottom: 10px;
+  }
+  
+  aside ul li a {
+    color: #333;                  /* Kolor tekstu */
+    text-decoration: none;        /* Brak podkreślenia */
+  }
+  
+  aside ul li a:hover {
+    text-decoration: underline;   /* Podkreślenie przy najechaniu */
+  }
+  

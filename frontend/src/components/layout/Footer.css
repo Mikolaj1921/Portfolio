@@ -1,0 +1,23 @@
+/* Styl dla stopki */
+footer {
+    background-color: #333;      /* Tło w ciemnym kolorze */
+    color: #fff;                 /* Kolor tekstu na biały */
+    padding: 20px;               /* Odstępy wewnętrzne */
+    text-align: center;          /* Wyrównanie tekstu do środka */
+    font-size: 0.9rem;           /* Mniejszy rozmiar czcionki */
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  footer p {
+    margin: 10px 0;
+  }
+  
