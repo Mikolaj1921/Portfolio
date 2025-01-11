@@ -1,0 +1,74 @@
+.projects-container{
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #333;
+}
+
+.projects-container h1{
+    color: rgb(231, 231, 231);
+}
+
+.projects-container h3{
+    text-align: center;
+    color: rgb(231, 231, 231);
+}
+
+/*what i'm doing*/
+.section-projects{
+    width: 100%;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Dwie równe kolumny */
+    gap: 20px;                             /* Odstępy między elementami */
+    color: white;
+}
+
+.column-pt1, .column-pt2, .column-pt3, .column-pt4 {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    justify-self: center;
+    align-self: center;
+    background-size: 100% 100%;  /* Dopasowanie obrazu w całości do kontenera */
+    background-position: center;  /* Wycentrowanie obrazu */
+    background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
+    border-radius: 20px;
+    width: 480px;
+    height: 250px;
+    transition: 0.9s all ease;
+}
+
+.column-pt1:hover, .column-pt2:hover, .column-pt3:hover, .column-pt4:hover{
+    transform: scale(1.025);
+}
+
+.column-pt1{
+    background-image: url('../../assets/images/project1.png');
+}
+
+.column-pt2{
+    background-image: url('../../assets/images/project2.png');
+}
+
+.column-pt3{
+    background-image: url('../../assets/images/project3.png');
+}
+
+.column-pt4{
+    background-image: url('../../assets/images/project4.png');
+}
+
+
+
+.pr-name{
+    text-align: center;
+    color: aliceblue;
+    margin-top: 10px;
+    font-size: large;
+    font-weight: 600;
+}
+
+.-text{
+    text-align: center;
+    color: #a7a7a7;
+    font-size: medium;
+    font-weight: 400;
+}

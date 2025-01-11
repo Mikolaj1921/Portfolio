@@ -2,7 +2,7 @@
 header {
     background-color: #333;      /* Tło w ciemnym kolorze */
     color: #fff;                 /* Kolor tekstu na biały */
-    padding: 20px;               /* Odstępy wewnętrzne */
+    padding: 0px 50px 0px 25px;               /* Odstępy wewnętrzne */
     display: flex;               /* Flexbox do ustawiania elementów w jednym wierszu */
     justify-content: space-between; /* Równo rozmieszczone elementy */
     align-items: center;         /* Wyrównanie do środka w osi pionowej */
@@ -18,6 +18,8 @@ header {
   }
   
   header nav a {
+    font-weight: 500;
+    font-size: 1.3rem;
     color: #fff;
     text-decoration: none;
     margin-left: 20px;

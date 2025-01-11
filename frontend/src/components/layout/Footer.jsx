@@ -4,7 +4,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer>
-      <p>&copy; 2025 Moje Portfolio. Wszystkie prawa zastrzeżone.</p>
+      <p>&copy; 2025 Mikołaj Melnyk Portfolio. Wszystkie prawa zastrzeżone.</p>
     </footer>
   );
 };

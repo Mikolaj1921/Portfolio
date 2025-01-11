@@ -11,7 +11,8 @@ const Header = () => {
         <a href="/Resume">Resume</a>
         <a href="/Contact">Contact</a>
       </nav> 
-      
+         
+
     </header>
   );
 };

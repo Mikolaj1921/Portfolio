@@ -1,31 +1,140 @@
-/* Styl dla elementu Aside */
-aside {
-    background-color: #f4f4f4;    /* Jasne tło */
+.Aside {
+    max-height: 80vh;
+    background-color: #333;    /* Jasne tło */
     padding: 20px;                /* Odstępy wewnętrzne */
-    border-left: 3px solid #ccc;  /* Lewa ramka */
-    margin-top: 20px;             /* Odstęp od góry */
+    border-radius: 30px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 0px solid #333; /* Tymczasowe obramowanie */
   }
   
-  aside h2 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+  .avatar{
+    background-image: url('../../assets/images/awatar.jpg');
+    background-size: cover;  /* Dopasowanie obrazu do kontenera, bez rozciągania */
+    background-position: center;  /* Wycentrowanie obrazu */
+    background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
+    height: 180px;  /* Ustawienie stałej wysokości dla aside */
+    width: 66%;  /* Szerokość na 100% szerokości kontenera */
+    border-radius: 20px;  /* Opcjonalnie zaokrąglone rogi */
+    justify-self: center;
+  }
+
+  .name-surname {
+    text-align: center;
+    color: #dbdbdb;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .status{
+    box-shadow: 2.5px 2.5px 10px rgba(0, 0, 0, 0.304);
+    text-align: center;
+    color: #dbdbdb;
+    font-size: 1rem;
+    border-radius: 20px;
+    padding: 5px;
+    justify-self: center;
+    width: 70%;
+    background-color: #2a2a2a;
+    margin-bottom: 20px;
   }
   
-  aside ul {
+  .Aside ul {
     list-style-type: none;         /* Usunięcie punktów listy */
     padding: 0;
   }
   
-  aside ul li {
+
+  .line- {
+    background-color: #404040;
+    border-radius: 20px;
+    height: 2px;
+    width: 100%;
     margin-bottom: 10px;
   }
+
+
+.info {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 20% 80%; /* Pierwsza kolumna: 20%, druga: 80% */
+    gap: 20px;                             /* Odstępy między elementami */
+    color: white;
+    justify-content: space-between;
+}
   
-  aside ul li a {
-    color: #333;                  /* Kolor tekstu */
-    text-decoration: none;        /* Brak podkreślenia */
-  }
+
+.column-pht1{
+  background-image: url('../../assets/images/mail.png');
+}
+
+.column-pht2{
+  background-image: url('../../assets/images/telephone.png');
+}
+
+.column-pht3{
+  background-image: url('../../assets/images/location.png');
+}
+
+.column-pht4{
+  background-image: url('../../assets/images/graduation.png');
+}
+
+.column-pht1,.column-pht2,.column-pht3,.column-pht4{
+  justify-self: center;
+  align-self: center;
+  background-size: cover;  /* Dopasowanie obrazu do kontenera, bez rozciągania */
+  background-position: center;  /* Wycentrowanie obrazu */
+  background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
+  width: 35px;
+  height: 35px;
+  margin-top: 5px;
+}
+
+.title {
+  font-size: 1rem;
+  margin-bottom: 7px;  /* Zmniejszenie odstępu między tytułem a tekstem */
+}
+
+.text {
+  font-size: 0.9rem;
+  width: 90%;
+  margin-top: 0;  /* Zmniejszenie marginesu górnego, jeśli jest ustawiony */
+}
+
+
+
+.social-icon {
+  display: grid; /* Flexbox dla elastycznego rozmieszczenia elementów */
+  flex-direction: column; /* Rozmieszczenie w kolumnie */
+  align-items: center; /* Wyrównanie ikon w pionie w środku */
+  margin: 20px auto; /* Centrowanie elementu w poziomie i ustalenie odstępu od góry */
+  width: fit-content; /* Szerokość dostosowana do zawartości */
+}
+
+/* Stylizacja listy */
+.social-icon ul {
+  list-style: none; /* Usunięcie kropek z listy */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px; /* Odstęp między ikonami */
+}
+
+.social-icon ul li a {
+  text-decoration: none;
+  color: #DE5F00;
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.social-icon ul li a:hover {
+  color: #dbdbdb; 
+}
   
-  aside ul li a:hover {
-    text-decoration: underline;   /* Podkreślenie przy najechaniu */
-  }
+
   
+ 
