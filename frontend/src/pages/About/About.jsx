@@ -17,7 +17,6 @@ const About = () => {
     { icon: 'devicon-javascript-plain colored', name: 'JavaScript' },
     { icon: 'devicon-git-plain colored', name: 'Git' },
     { icon: 'devicon-github-original colored', name: 'GitHub' },
-    { icon: 'devicon-visualstudio-plain colored', name: 'Visual Studio Code' },
 
     ];
 

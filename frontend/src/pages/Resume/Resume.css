@@ -1,5 +1,396 @@
 .resume-container{
+    display: grid;
+    grid-template-columns: 70% 30%;
     padding: 20px;
     border-radius: 20px;
     background-color: #333;
 }
+
+.aside-content{
+    padding: 0px 20px 0px 20px;
+    border-radius: 20px;
+    background-color: #3d3d3d;
+    max-height: 150vh;
+}
+
+
+.title_r{
+    text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
+    color: rgb(231, 231, 231);
+}
+
+.subtitle_r{
+    text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
+    color: rgb(231, 231, 231);
+}
+
+.subsubtitle_r{
+    font-size: 1.25rem;
+    color: rgb(231, 231, 231);
+}
+
+.date_r{
+    font-size: 1.08rem;
+    color: rgb(231, 231, 231);
+}
+
+.education p{
+    width: 95%;
+    font-size: 1.08rem;
+    color: rgb(231, 231, 231);
+}
+
+.education-item{
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
+    width: 95%;
+    grid-template-columns: 20% 80%;
+    display: grid;
+    padding: 0px 10px 15px 10px;
+    margin: 0px 15px 15px 0px;
+    border-radius: 20px;
+    background-color: #3d3d3d;
+}
+
+.col_photo1,.col_photo2,.col_photo3,.col_photo4,.col_photo5,.col_photo6,.col_photo7{
+    justify-self: center;
+    align-self: center;
+    background-size: cover;  /* Dopasowanie obrazu do kontenera, bez rozciągania */
+    background-position: center;  /* Wycentrowanie obrazu */
+    background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
+    width: 80px;
+    height: 80px;
+}
+
+.col_photo1{
+    background-image: url('../../assets/images/university.png');
+    transition: 0.8s all ease;
+}
+.col_photo1:hover{
+    transform: scale(1.1);
+}
+
+.col_photo2{
+    background-image: url('../../assets/images/school.png');
+    transition: 0.8s all ease;
+}
+.col_photo2:hover{
+    transform: scale(1.1);
+}
+
+.col_photo3{
+    width: 120px;
+    height: 120px;
+    background-image: url('../../assets/images/suntrail.png');
+    transition: 0.8s all ease;
+}
+.col_photo3:hover{
+    transform: scale(1.1);
+}
+
+.col_photo4{
+    width: 95px;
+    height: 95px;
+    background-image: url('../../assets/images/slodkachwila.png');
+    transition: 0.8s all ease;
+}
+.col_photo4:hover{
+    transform: scale(1.1);
+}
+
+.col_photo5{
+    width: 105px;
+    height: 105px;
+    background-image: url('../../assets/images/nauczajka.png');
+    transition: 0.8s all ease;
+}
+.col_photo5:hover{
+    transform: scale(1.1);
+}
+
+.col_photo6{
+    margin-top: 30px;
+    width: 95px;
+    height: 95px;
+    background-image: url('../../assets/images/projects.png');
+    transition: 0.8s all ease;
+}
+.col_photo6:hover{
+    transform: scale(1.1);
+}
+
+.col_photo7{
+    margin-top: 30px;
+    width: 95px;
+    height: 95px;
+    background-image: url('../../assets/images/chat.png');
+    transition: 0.8s all ease;
+}
+.col_photo7:hover{
+    transform: scale(1.1);
+}
+
+
+.col_text{
+    padding-left: 10px;
+    padding-right: 1px;
+}
+
+
+.experience-item{
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
+    width: 95%;
+    grid-template-columns: 80% 20%;
+    display: grid;
+    padding: 0px 10px 15px 10px;
+    margin: 0px 15px 15px 0px;
+    border-radius: 20px;
+    background-color: #3d3d3d;
+}
+
+.experience p{
+    
+    width: 95%;
+    font-size: 1.08rem;
+    color: rgb(231, 231, 231);
+}
+
+
+/*achievement*/
+
+
+.col_3_achievement{
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
+    width: 95%;
+    grid-template-columns: 30% 70%;
+    display: grid;
+    padding: 0px 10px 15px 10px;
+    margin: 0px 15px 15px 0px;
+    border-radius: 20px;
+    background-color: #3d3d3d;
+}
+
+.col_3_achievement p{
+    width: 95%;
+    font-size: 1.08rem;
+    color: rgb(231, 231, 231);
+}
+
+
+/*info section*/
+.info-item{
+    gap: 4%;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
+    width: 95%;
+    grid-template-columns: 48% 48%;
+    display: grid;
+    padding: 0px 10px 15px 10px;
+    margin: 0px 15px 15px 0px;
+    border-radius: 20px;
+    background-color: #3d3d3d
+}
+
+.subsubtitle_info{
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;;
+    color: rgb(231, 231, 231);
+}
+
+.left-info{
+    grid-template-rows: 50% 50%;
+    color: rgb(231, 231, 231);
+}
+
+.right-info{
+    color: rgb(231, 231, 231);
+}
+
+.contact-click-info{
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
+    justify-self: center;
+    width: 60%;
+    padding: 15px;
+    border-radius: 30px;
+    text-align: center;
+    background-color: #424242;
+    color: rgb(231, 231, 231);
+    padding-bottom: 20px;
+    transition: 0.9s all ease;
+}
+
+.contact-click-info:hover{
+    transform: scale(1.075);
+}
+
+.col_text_info{
+    font-size: 1.05rem;
+    text-align: center;
+    padding: 10px;
+}
+
+/*title aside*/
+.title-aside-r h1{
+    text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: rgb(231, 231, 231);
+}
+
+/*skills*/
+.skills{
+    margin-top: 25px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+
+.skills h2{
+    color: rgb(231, 231, 231);
+}
+
+
+.skills-column{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #3d3d3d;
+}
+
+.skill-col{
+    color: rgb(231, 231, 231);
+    display: grid;
+    grid-template-columns: 12.5% 20%;
+    gap: 17.5px;
+}
+
+.min-image-skill1,.min-image-skill2,.min-image-skill3,.min-image-skill4,.min-image-skill5,.min-image-skill6,.min-image-skill7,.min-image-skill8,.min-image-skill9{
+    justify-self: center;
+    background-size: cover;  /* Dopasowanie obrazu do kontenera, bez rozciągania */
+    background-position: center;  /* Wycentrowanie obrazu */
+    background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
+    width: 25px;
+    height: 25px;
+}
+
+.min-image-skill1{
+    background-image: url('../../assets/images/html.png');
+}
+.min-image-skill2{
+    background-image: url('../../assets/images/css.png');
+}
+.min-image-skill3{
+    background-image: url('../../assets/images/javascript.png');
+}
+.min-image-skill4{
+    background-image: url('../../assets/images/react.png');
+}
+.min-image-skill5{
+    background-image: url('../../assets/images/node.png');
+}
+.min-image-skill6{
+    background-image: url('../../assets/images/expressjs.png');
+}
+.min-image-skill7{
+    background-image: url('../../assets/images/postgres.png');
+}
+.min-image-skill8{
+    background-image: url('../../assets/images/git.png');
+}
+.min-image-skill9{
+    background-image: url('../../assets/images/github.png');
+}
+
+
+.name-skill{
+    list-style: none;
+    color: rgb(231, 231, 231);
+}
+
+
+.image-skill{
+    justify-self: center;
+    align-self: center;
+    background-size: cover;  /* Dopasowanie obrazu do kontenera, bez rozciągania */
+    background-position: center;  /* Wycentrowanie obrazu */
+    background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
+    width: 150px;
+    height: 150px;
+    background-image: url('../../assets/images/skill-development.png');
+    transition: 0.8s all ease;
+}
+
+.image-skill:hover{
+    transform: scale(1.1);
+}
+
+/*Language*/
+.lang{
+    margin-top: 40px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+
+.lang h2{
+    color: rgb(231, 231, 231);
+}
+
+.lang-column{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #3d3d3d;
+}
+
+.name-lang{
+    color: rgb(231, 231, 231);
+}
+
+.name-lang li{
+    list-style: none;
+    margin: 10px 0px;
+}
+
+.image-lang{
+    justify-self: center;
+    align-self: center;
+    background-size: cover;  /* Dopasowanie obrazu do kontenera, bez rozciągania */
+    background-position: center;  /* Wycentrowanie obrazu */
+    background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
+    width: 120px;
+    height: 120px;
+    background-image: url('../../assets/images/language.png');
+    transition: 0.8s all ease;
+}
+
+.image-lang:hover{
+    transform: scale(1.1);
+}
+
+  .progress-bar {
+    display: flex;
+    margin-top: 10px;
+    height: 10px; /* Wysokość paska */
+    width: 100%; /* Szerokość paska */
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-segment {
+    height: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .orange {
+    background-color: #DE5F00; /* Zielony dla poziomu */
+  }
+  
+  .gray {
+    background-color: #d3d3d3; /* Szary dla pozostałych poziomów */
+  }
+  
+
+

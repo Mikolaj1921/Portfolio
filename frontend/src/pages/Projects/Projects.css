@@ -61,9 +61,9 @@
 .pr-name{
     text-align: center;
     color: aliceblue;
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: large;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .-text{
@@ -71,4 +71,20 @@
     color: #a7a7a7;
     font-size: medium;
     font-weight: 400;
+}
+
+
+
+/* Dla ekranów o szerokości mniejszej niż 1200px (np. tablety i małe laptopy) */
+@media (max-width: 1900px) {
+    .section-projects {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolumny */
+    }
+}
+
+/* Dla ekranów o szerokości mniejszej niż 800px (np. telefony) */
+@media (max-width: 1400px) {
+    .section-projects {
+        grid-template-columns: 1fr; /* 1 kolumna */
+    }
 }

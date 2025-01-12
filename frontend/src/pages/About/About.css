@@ -10,7 +10,7 @@
 
 .about-me-text{
     
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-family: 'Roboto' , sans-serif;
     color: rgb(176, 176, 176);
     padding-bottom: 5px;
@@ -111,7 +111,7 @@
 }
 
 .section-hobby p{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-family: 'Roboto' , sans-serif;
 }
 
@@ -167,7 +167,7 @@
 /*why it*/  
   .story-text{
     font-family: 'Roboto' , sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: rgb(176, 176, 176);
 } 
 
