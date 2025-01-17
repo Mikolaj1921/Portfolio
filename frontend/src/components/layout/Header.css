@@ -1,34 +1,39 @@
 /* Styl dla kontenera nagłówka */
 header {
-    background-color: #333;      /* Tło w ciemnym kolorze */
-    color: #fff;                 /* Kolor tekstu na biały */
-    padding: 0px 50px 0px 25px;               /* Odstępy wewnętrzne */
-    display: flex;               /* Flexbox do ustawiania elementów w jednym wierszu */
-    justify-content: space-between; /* Równo rozmieszczone elementy */
-    align-items: center;         /* Wyrównanie do środka w osi pionowej */
-  }
-  
-  header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  header nav {
-    display: flex;
-  }
-  
-  header nav a {
-    font-weight: 500;
-    font-size: 1.3rem;
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  header nav a:hover {
-    background-color: #444; /* Zmiana tła przy najechaniu */
-  }
-  
+  background-color: #333;      /* Tło w ciemnym kolorze */
+  color: #fff;                 /* Kolor tekstu na biały */
+  padding: 0px 50px 0px 25px;  /* Odstępy wewnętrzne */
+  display: flex;               /* Flexbox do ustawiania elementów w jednym wierszu */
+  justify-content: space-between; /* Równo rozmieszczone elementy */
+  align-items: center;         /* Wyrównanie do środka w osi pionowej */
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header nav {
+  display: flex;
+}
+
+header nav a {
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 10px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, text-decoration 0.3s ease;
+  transition: 0.7s all ease;
+}
+
+header nav a.active {
+  background-color: #3d3d3d;  /* Podkreślenie aktywnego linku */
+}
+
+header nav a:hover {
+  background-color: #3d3d3d; /* Zmiana tła przy najechaniu */
+  transform: scale(1.075);
+}

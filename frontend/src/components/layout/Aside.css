@@ -73,6 +73,13 @@
   background-image: url('../../assets/images/telephone.png');
 }
 
+.clickable-area {
+  width: 35px;
+  height: 35px;
+  background: rgba(0, 0, 0, 0); /* Przezroczysty, nie wpływa na tło */
+  cursor: pointer;
+}
+
 .column-pht3{
   background-image: url('../../assets/images/location.png');
 }
@@ -90,6 +97,22 @@
   width: 35px;
   height: 35px;
   margin-top: 5px;
+  transition: 0.7s all ease;
+
+}
+
+.column-pht1 a,.column-pht2 a,.column-pht3 a,.column-pht4 a{
+  position: absolute; /* Link obejmuje cały kontener */
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  display: block; /* Link jako blokowy, aby wypełniał cały kontener */
+  text-decoration: none; /* Usunięcie domyślnego podkreślenia */
+}
+
+.column-pht1:hover,.column-pht2:hover,.column-pht3:hover,.column-pht4:hover{
+  transform: scale(1.15);
 }
 
 .title {

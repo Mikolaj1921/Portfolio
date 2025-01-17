@@ -14,15 +14,15 @@
 }
 
 
-.title_r{
+
+.subtitle_r {
     text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
     color: rgb(231, 231, 231);
+    animation: fadeInLeft 1s ease-out forwards;
 }
 
-.subtitle_r{
-    text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
-    color: rgb(231, 231, 231);
-}
+
+
 
 .subsubtitle_r{
     font-size: 1.25rem;
@@ -32,6 +32,11 @@
 .date_r{
     font-size: 1.08rem;
     color: rgb(231, 231, 231);
+}
+
+.education{
+    margin-bottom: 30px;
+    animation: fadeInLeft 1s ease-out forwards;
 }
 
 .education p{
@@ -49,6 +54,7 @@
     margin: 0px 15px 15px 0px;
     border-radius: 20px;
     background-color: #3d3d3d;
+    
 }
 
 .col_photo1,.col_photo2,.col_photo3,.col_photo4,.col_photo5,.col_photo6,.col_photo7{
@@ -67,6 +73,15 @@
 }
 .col_photo1:hover{
     transform: scale(1.1);
+}
+.col_photo1 a,.col_photo2 a,.col_photo3 a,.col_photo4 a,.col_photo5 a {
+    position: absolute; /* Link obejmuje cały kontener */
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    display: block; /* Link jako blokowy, aby wypełniał cały kontener */
+    text-decoration: none; /* Usunięcie domyślnego podkreślenia */
 }
 
 .col_photo2{
@@ -136,6 +151,12 @@
 }
 
 
+/*experience*/
+.experience{
+    animation: fadeInLeft 1s ease-out forwards;
+    margin-bottom: 30px;
+}
+
 .experience-item{
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
     width: 95%;
@@ -156,7 +177,10 @@
 
 
 /*achievement*/
-
+.achievement{
+    animation: fadeInLeft 1s ease-out forwards;
+    margin-bottom: 30px;
+}
 
 .col_3_achievement{
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
@@ -177,6 +201,10 @@
 
 
 /*info section*/
+.info-section{
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
 .info-item{
     gap: 4%;
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
@@ -228,11 +256,17 @@
     padding: 10px;
 }
 
+
+
+
+/*ASIDE RIGHT*/
+
 /*title aside*/
 .title-aside-r h1{
     text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3);
     text-align: center;
     color: rgb(231, 231, 231);
+    animation: fadeInUplow 1s ease-out forwards;
 }
 
 /*skills*/
@@ -244,13 +278,13 @@
 }
 
 .skills h2{
+    animation: fadeInUplow 1s ease-out forwards;
     color: rgb(231, 231, 231);
 }
 
 
 .skills-column{
     display: grid;
-    grid-template-columns: 40% 60%;
     gap: 20px;
     padding: 20px;
     border-radius: 20px;
@@ -262,6 +296,7 @@
     display: grid;
     grid-template-columns: 12.5% 20%;
     gap: 17.5px;
+    animation: fadeInRight 1s ease-out forwards;
 }
 
 .min-image-skill1,.min-image-skill2,.min-image-skill3,.min-image-skill4,.min-image-skill5,.min-image-skill6,.min-image-skill7,.min-image-skill8,.min-image-skill9{
@@ -271,6 +306,11 @@
     background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
     width: 25px;
     height: 25px;
+    transition: 1s all ease;
+}
+
+.min-image-skill1:hover,.min-image-skill2:hover,.min-image-skill3:hover,.min-image-skill4:hover,.min-image-skill5:hover,.min-image-skill6:hover,.min-image-skill7:hover,.min-image-skill8:hover,.min-image-skill9:hover{
+    transform: scale(1.15);
 }
 
 .min-image-skill1{
@@ -308,17 +348,7 @@
 }
 
 
-.image-skill{
-    justify-self: center;
-    align-self: center;
-    background-size: cover;  /* Dopasowanie obrazu do kontenera, bez rozciągania */
-    background-position: center;  /* Wycentrowanie obrazu */
-    background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
-    width: 150px;
-    height: 150px;
-    background-image: url('../../assets/images/skill-development.png');
-    transition: 0.8s all ease;
-}
+
 
 .image-skill:hover{
     transform: scale(1.1);
@@ -333,12 +363,12 @@
 }
 
 .lang h2{
+    animation: fadeInUplow 1s ease-out forwards;
     color: rgb(231, 231, 231);
 }
 
 .lang-column{
     display: grid;
-    grid-template-columns: 50% 50%;
     gap: 20px;
     padding: 20px;
     border-radius: 20px;
@@ -349,22 +379,19 @@
     color: rgb(231, 231, 231);
 }
 
-.name-lang li{
+.left-li{
+    animation: fadeInLeft 1s ease-out forwards;
     list-style: none;
     margin: 10px 0px;
 }
 
-.image-lang{
-    justify-self: center;
-    align-self: center;
-    background-size: cover;  /* Dopasowanie obrazu do kontenera, bez rozciągania */
-    background-position: center;  /* Wycentrowanie obrazu */
-    background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
-    width: 120px;
-    height: 120px;
-    background-image: url('../../assets/images/language.png');
-    transition: 0.8s all ease;
+.right-li{
+    animation: fadeInRight 1s ease-out forwards;
+    list-style: none;
+    margin: 10px 0px;
 }
+
+
 
 .image-lang:hover{
     transform: scale(1.1);
@@ -392,5 +419,4 @@
     background-color: #d3d3d3; /* Szary dla pozostałych poziomów */
   }
   
-
 

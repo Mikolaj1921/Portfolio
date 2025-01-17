@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import './Resume.css';
+import '../Animation.css'
 import {Link } from 'react-router-dom';
 
 const Resume = () => {
@@ -39,13 +40,16 @@ const Resume = () => {
         <div className="resume-container">
 
             <div className="content">
-                <h1 className="title_r">Resume</h1>
+                <h1 className="title_h1">Resume</h1>
                 <div className="line"></div>
 
                 <section className="education">
                     <h2 className="subtitle_r">Edukacja</h2>
                     <div className="education-item">
-                        <div className="col_photo1"></div>
+                        <div className="col_photo1">
+                            {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+                            <a href="https://weii.prz.edu.pl/" target="_blank" rel="noopener noreferrer"></a>
+                        </div>
                         <div className="col_text">
                             <h3 className="subsubtitle_r">Politechnika Rzeszowska Im. Ignacego Łukasiewicza</h3>
                             <span className="date_r"> 2022 — now</span>
@@ -64,7 +68,10 @@ const Resume = () => {
                     </div>
 
                     <div className="education-item">
-                        <div className="col_photo2"></div>
+                        <div className="col_photo2">
+                            {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+                            <a href="https://most3.licey.org.ua/" target="_blank" rel="noopener noreferrer"></a>                            
+                        </div>
                         <div className="col_text">
                             <h3 className="subsubtitle_r">Liceum nr 3 imienia Św. Królowej Jadwigi w Mościskach</h3>
                             <span className="date_r"> 2016 - 2022</span>
@@ -95,7 +102,10 @@ const Resume = () => {
                                 Odpowiadałem za pełną część front-endową, projektując responsywne, intuicyjne i estetyczne widoki aplikacji.
                             </p>
                         </div>
-                        <div className="col_photo3"></div>
+                        <div className="col_photo3">
+                            {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+                            <a href="https://w.prz.edu.pl/uczelnia/aktualnosci/suntrail-pierwszy-spin-off-w-ramach-politechniki-rzeszowskiej-2371.html" target="_blank" rel="noopener noreferrer"></a>                               
+                        </div>
                     </div>
 
                     <div className="experience-item">
@@ -115,14 +125,20 @@ const Resume = () => {
                                 Projekt korzysta z usług takich jak Netlify i Render do hostowania front-endu i back-endu.
                             </p>
                         </div>
-                        <div className="col_photo4"></div>
+                        <div className="col_photo4">
+                            {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+                            <a href="https://slodkachwila.netlify.app/" target="_blank" rel="noopener noreferrer"></a>                               
+                        </div>
                     </div>
                 </section>
 
                 <section className="achievement">
                     <h2 className="subtitle_r">Osiągnięcia</h2>
                     <div className="col_3_achievement">
-                        <div className="col_photo5"></div>
+                        <div className="col_photo5">
+                            {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+                            <a href="https://zsz.prz.edu.pl/dzialalnosc-naukowa/projekty" target="_blank" rel="noopener noreferrer"></a>                              
+                        </div>
                         <div className="col_text">
                         <h3 className="subsubtitle_r">Nauczajka</h3>
                         <span className="date_r">2023 - 2024</span>
@@ -202,7 +218,7 @@ const Resume = () => {
                             <div className="min-image-skill9"></div>
                             <li className="name-skill">GitHub</li>
                         </div>
-                        <div className="image-skill"></div>
+                        
                     </div>
 
                 </div>
@@ -211,24 +227,24 @@ const Resume = () => {
                     <div className="line"></div>
                     <div className="lang-column">
                         <div className="name-lang">
-                            <li>
+                            <li className="left-li">
                                 <strong>Język Polski:</strong> {languageLevels.polish}
                                 {renderProgressBar(languageLevels.polish)}
                             </li>
-                            <li>
+                            <li className="right-li">
                                 <strong>Język Angielski:</strong> {languageLevels.english}
                                 {renderProgressBar(languageLevels.english)}
                             </li>
-                            <li>
+                            <li className="left-li">
                                 <strong>Język Ukraiński:</strong> {languageLevels.ukrainian}
                                 {renderProgressBar(languageLevels.ukrainian)}
                             </li>
-                            <li>
+                            <li className="right-li">
                                 <strong>Język Rosyjski:</strong> {languageLevels.russian}
                                 {renderProgressBar(languageLevels.russian)}
                             </li>
                         </div>
-                        <div className="image-lang"></div>
+                        
                     </div>
                 </div>
 

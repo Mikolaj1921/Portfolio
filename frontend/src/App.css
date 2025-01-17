@@ -1,5 +1,18 @@
 
 body {
-    background-color: rgb(0, 0, 0);
+    background: linear-gradient(200deg, #000000, #575757, #000000);
+    animation: gradient-flow 15s ease infinite;
+    background-size: 300% 300%;
 }
 
+@keyframes gradient-flow{
+    0%{
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%; /* Середина — градиент полностью сдвинулся */
+    }
+    100% {
+        background-position: 0% 50%; /* Возврат в начальную позицию */
+    }
+}

@@ -4,12 +4,14 @@
     background-color: #333;
 }
 
-.about-container h1{
+.sub_title_h1{
+    text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
     color: rgb(231, 231, 231);
+    animation: fadeInLeft 1s ease-out forwards;
 }
 
 .about-me-text{
-    
+    animation: fadeInRight 1s ease-out forwards;
     font-size: 1.2rem;
     font-family: 'Roboto' , sans-serif;
     color: rgb(176, 176, 176);
@@ -21,8 +23,23 @@
     border-radius: 20px;
     height: 5px;
     width: 5%;
+
+    opacity: 0;  /* Начальная невидимость */
+    transform: translateX(-20px);  /* Начальная позиция элемента (сдвиг вверх) */
+    animation: fadeInLeft-line 1s ease-out forwards;  /* Применение анимации */
 }
 
+/*Wejscie z góry animacja*/
+@keyframes fadeInLeft-line {
+    0% {
+      opacity: 0;  /* Начинаем с невидимого */
+      transform: translateX(-20px);  /* Начальная позиция выше */
+    }
+    100% {
+      opacity: 1;  /* Элемент становится видимым */
+      transform: translateY(0);  /* Элемент возвращается в исходную позицию */
+    }
+  }
   
 /*what i'm doing*/
 .section-what-im-doing{
@@ -32,6 +49,7 @@
     grid-template-columns: repeat(2, 1fr); /* Dwie równe kolumny */
     gap: 20px;                             /* Odstępy między elementami */
     color: white;
+    animation: fadeInLeft 1s ease-out;
 }
 
 .p1, .p2, .p3, .p4{
@@ -58,6 +76,7 @@
 .p1:hover, .p2:hover, .p3:hover, .p4:hover{
     transform: scale(1.1);
 }
+
 
 .column-photo1{
     background-image: url('../../assets/images/www.png');
@@ -95,14 +114,16 @@
 }
 
 /*hobby*/
+
 .hobby{
     font-size: 1.7rem;
+    animation: fadeInLeft 1s ease-out forwards;
 }
 
 .section-hobby{
     color: #bdbdbd;
     font-size: 1.25rem;
-    padding: 10px;
+    padding: 10px 25px;
     text-decoration: none;
     border-radius: 20px;
     margin: 20px;
@@ -111,6 +132,7 @@
 }
 
 .section-hobby p{
+    animation: fadeInRight 1s ease-out forwards;
     font-size: 1.2rem;
     font-family: 'Roboto' , sans-serif;
 }
@@ -123,9 +145,16 @@
     text-align: center;
     padding: 20px;
   }
+
+  .sub_title_h1_up{
+    text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
+    color: rgb(231, 231, 231);
+    animation: fadeInUplow 1s ease-out forwards;
+}
   
   
   .skills-carousel {
+    animation: fadeInDownlow 1s ease-out forwards;
     margin-top: 40px;
     display: flex;
     align-items: center;
@@ -166,6 +195,7 @@
 
 /*why it*/  
   .story-text{
+    animation: fadeInRight 1s ease-out forwards;
     font-family: 'Roboto' , sans-serif;
     font-size: 1.2rem;
     color: rgb(176, 176, 176);
@@ -183,6 +213,7 @@
 }
 
 .contact-text{
+    animation: fadeInDownlow 1s ease-out forwards;
     padding-top: 20px;
     font-size: 1.25rem;
     text-align: center;
@@ -190,6 +221,7 @@
 }
 
 .contact-click{
+    animation: fadeInDownlow 1s ease-out forwards;
     margin-left: 35%;
     width: 30%;
     padding-top: 10px;

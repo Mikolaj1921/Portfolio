@@ -3,3 +3,148 @@
     border-radius: 20px;
     background-color: #333;
 }
+
+
+.section-map{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    overflow: hidden; /* Ważne dla zaokrąglonych rogów */
+    border-radius: 15px; /* Ustawienie zaokrąglonych rogów */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1); /* Opcjonalne cieniowanie */
+    animation: fadeInDownlow 1s ease-out forwards;
+    background: linear-gradient();
+    border: 5px solid #202020;
+}
+
+
+
+.section-contact-form{
+    overflow: hidden; /* Ważne dla zaokrąglonych rogów */
+    border-radius: 15px; /* Ustawienie zaokrąglonych rogów */
+}
+
+.title-contact{
+    padding-top: 10px;
+    text-align: center;
+    text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
+    color: rgb(231, 231, 231);
+    animation: fadeInUplow 1s ease-out forwards;
+}
+
+.contact-form-up{
+    margin-top: 50px;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    display: grid;
+    padding: 15px 10px 15px 0px;
+    border-radius: 20px;
+    transition: 0.9s all ease;
+}
+
+.input-container-namesurname,.input-container-email,.input-container-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.input-container-namesurname{
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
+.input-container-email{
+    animation: fadeInRight 1s ease-out forwards;
+}
+
+.input-container-message{
+    animation: fadeInDownlow 1s ease-out forwards;
+}
+
+
+.first-text, .twice-email{
+    margin-bottom: 10px;
+    font-size: 1.025rem;
+    color: rgb(231, 231, 231);
+    width: 80%;
+    height: 20px;
+    background-color: #202020;
+    border-radius: 20px;
+    padding: 15px;
+    border: 0px solid #333; /* Tymczasowe obramowanie */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+/* Stan focus */
+.input-container input:focus,
+.input-container textarea:focus {
+    border-color: #DE5F00;
+    box-shadow: 0 0 10px rgba(222, 95, 0, 0.7);
+}
+
+/* Błąd w polu */
+.input-container.error input,
+.input-container.error textarea {
+    box-shadow: 0 0 10px #de60004b; /* Czerwona poświata */
+}
+
+.input-container.error input::placeholder,
+.input-container.error textarea::placeholder {
+    color: #de6000a4; /* Czerwony placeholder w przypadku błędu */
+}
+
+
+.contact-form-up,.contact-form-down textarea{
+    resize: none;
+}
+
+
+
+.contact-form-down{
+    margin-bottom: 50px;
+    grid-template-columns: 100%;
+    justify-items: center;
+    display: grid;
+    padding: 15px 10px 15px 0px;
+    border-radius: 20px;
+}
+
+.message{
+    margin-bottom: 20px;
+    color: rgb(231, 231, 231);
+    font-size: 1.025rem;
+    width: 90%;
+    height: 150px;
+    background-color: #202020;
+    border-radius: 20px;
+    padding: 15px;
+    border: 0px solid #333; /* Tymczasowe obramowanie */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+
+}
+
+.send-message{
+    font-size: 1.2rem;
+    color: #777777;
+    margin: 20px 0px;
+    width: 20%;
+    height: 80%;
+    background-color: #202020;
+    border-radius: 20px;
+    padding: 15px;
+    border: 0px solid #333; /* Tymczasowe obramowanie */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.8s all ease;
+    animation: fadeInDownlow 1s ease-out forwards;
+}
+
+.send-message:hover{
+    background-color: #DE5F00;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+

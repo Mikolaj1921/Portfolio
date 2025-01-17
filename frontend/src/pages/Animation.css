@@ -1,0 +1,98 @@
+/*Wejscie z góry animacja*/
+@keyframes fadeInUp {
+    0% {
+      opacity: 0; 
+      transform: translateY(-50px);  
+    }
+    100% {
+      opacity: 1;  
+      transform: translateY(0);  
+    }
+  }
+
+  @keyframes fadeInUplow {
+    0% {
+      opacity: 0; 
+      transform: translateY(-25px);  
+    }
+    100% {
+      opacity: 1;  
+      transform: translateY(0);  
+    }
+  }
+
+  /*Wejscie z dolu animacja*/
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    
+
+    
+}
+
+ /*Wejscie z dolu animacja*/
+ @keyframes fadeInDown-again {
+    0% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-15px); /* Текст появляется слева */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px); /* Текст приходит в изначальное положение */
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(15px); /* Текст появляется слева */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px); /* Текст приходит в изначальное положение */
+    }
+}
+
+
+@keyframes fadeInLeftDown {
+    0% {
+        opacity: 0;
+        transform: translate(10px,20px); /* Текст появляется слева */
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px,0px); /* Текст приходит в изначальное положение */
+    }
+}
+
+  /*Wejscie z dolu animacja*/
+  @keyframes fadeInDownlow {
+    0% {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

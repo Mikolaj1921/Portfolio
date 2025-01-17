@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import '../Animation.css'
 import {Link } from 'react-router-dom';
 
 
@@ -24,7 +25,7 @@ const About = () => {
 
   return (
     <div className="about-container">
-        <h1>O mnie</h1>
+        <h1 className='title_h1'>O mnie</h1>
         <div className='line'></div>
         <p className='about-me-text'>
             <p>Jestem studentem i programistą stron internetowych specjalizującym się w budowaniu
@@ -36,7 +37,7 @@ const About = () => {
             <p>Pasjonuję się rozwijaniem swoich umiejętności w zakresie programowania i
             stale doskonalę swoje umiejętności tworzenia nowoczesnych, dynamicznych rozwiązań.</p>
         </p>
-        <h1>Czym się zajmuję?</h1>
+        <h1 className='sub_title_h1'>Czym się zajmuję?</h1>
         <div className='section-what-im-doing'>
 
             <div className='p1'>
@@ -102,7 +103,7 @@ const About = () => {
         </div>
 
         <div className="Skills">
-            <h1>Umiejętności zawodowe</h1>
+            <h1 className='sub_title_h1_up'>Umiejętności zawodowe</h1>
             <div className="skills-carousel">
                 <div className="skills-track">
                 {skills.map((skill, index) => (
@@ -116,7 +117,7 @@ const About = () => {
         </div>
 
         <div className='Why-it'>
-            <h1>Dlaczego wybrałem programowanie?</h1>
+            <h1 className='sub_title_h1'>Dlaczego wybrałem programowanie?</h1>
             <div className='line'></div>
             <p className='story-text'>
 

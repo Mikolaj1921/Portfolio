@@ -1,9 +1,12 @@
 import React from 'react';
 import './Aside.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Aside = () => {
+  
+  const nr_tel = '+48888508630';
+
   return (
     <aside className="Aside">
       <div className='avatar'></div>
@@ -16,7 +19,8 @@ const Aside = () => {
 
         <div className='info'>
           <div class="column-pht1">
-            
+            {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank" rel="noopener noreferrer"></a>             
           </div>
           <div class="column-txt">
             <h3 className='title'>Email:</h3>
@@ -25,8 +29,10 @@ const Aside = () => {
         </div>
 
         <div className='info'>
-          <div class="column-pht2">
-            
+          <div className="column-pht2">
+            <CopyToClipboard text={nr_tel}>
+              <div className="clickable-area"></div>
+            </CopyToClipboard>
           </div>
           <div class="column-txt">
             <h3 className='title'>Telefon:</h3>
@@ -36,7 +42,8 @@ const Aside = () => {
 
         <div className='info'>
           <div class="column-pht3">
-            
+            {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+            <a href="https://maps.app.goo.gl/w2bqvvJfdKjTWNGJ8" target="_blank" rel="noopener noreferrer"></a> 
           </div>
           <div class="column-txt">
             <h3 className='title'>Lokalizacja:</h3>
@@ -44,10 +51,11 @@ const Aside = () => {
           </div>
         </div> 
 
-
+        
         <div className='info'>
           <div class="column-pht4">
-            
+            {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+            <a href="https://w.prz.edu.pl/" target="_blank" rel="noopener noreferrer"></a>             
           </div>
           <div class="column-txt">
             <h3 className='title'>Uczelnia:</h3>

@@ -4,14 +4,57 @@
     background-color: #333;
 }
 
-.projects-container h1{
+.title_h1{
+    text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
+    color: rgb(231, 231, 231);
+    opacity: 0;  
+    transform: translateY(-50px);  
+    animation: fadeInUplow 1s ease-out forwards;  
     color: rgb(231, 231, 231);
 }
 
+
 .projects-container h3{
+    opacity: 0;  
+    transform: translateY(-50px);  
+    animation: fadeInUplow 1s ease-out forwards;  
     text-align: center;
     color: rgb(231, 231, 231);
 }
+
+.social-icon-git{
+    display: grid; 
+    flex-direction: column;
+    align-items: center; 
+    margin: 20px auto; 
+    width: fit-content; 
+    opacity: 0;  
+    transform: translateY(-50px);  
+    animation: fadeInUplow 1s ease-out forwards;  
+}
+
+  
+.social-icon-git ul {
+    list-style: none; /* Usunięcie kropek z listy */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px; 
+  }
+  
+  .social-icon-git ul li a {
+    text-decoration: none;
+    color: #DE5F00;
+    font-size: 2rem;
+    transition: color 0.3s ease, transform 0.3s ease; 
+  }
+  
+  .social-icon-git ul li a:hover {
+    color: #dbdbdb; 
+  }
+
 
 /*what i'm doing*/
 .section-projects{
@@ -21,7 +64,11 @@
     grid-template-columns: repeat(3, 1fr); /* Dwie równe kolumny */
     gap: 20px;                             /* Odstępy między elementami */
     color: white;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInDown 1s ease-out forwards;
 }
+
 
 .column-pt1, .column-pt2, .column-pt3, .column-pt4 {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
@@ -33,7 +80,9 @@
     border-radius: 20px;
     width: 480px;
     height: 250px;
-    transition: 0.9s all ease;
+    transition: 1.1s all ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .column-pt1:hover, .column-pt2:hover, .column-pt3:hover, .column-pt4:hover{
@@ -43,19 +92,91 @@
 .column-pt1{
     background-image: url('../../assets/images/project1.png');
 }
+.column-pt1:hover{
+    background-image: url('../../assets/images/project1_blur.png');
+}
 
 .column-pt2{
     background-image: url('../../assets/images/project2.png');
 }
 
+.column-pt2:hover{
+    background-image: url('../../assets/images/project2_blur.png');
+}
+
 .column-pt3{
     background-image: url('../../assets/images/project3.png');
+}
+.column-pt3:hover{
+    background-image: url('../../assets/images/project3_blur.png');
 }
 
 .column-pt4{
     background-image: url('../../assets/images/project4.png');
 }
+.column-pt4:hover{
+    background-image: url('../../assets/images/project4_blur.png');
+}
 
+
+
+.pt-img {
+    width: 100%;
+    height: 100%; /* Przykładowa wysokość, dostosuj do potrzeb */
+    z-index: -1; /* Ustawia wyższy poziom nakładania się, aby element był na wierzchu */
+    border-radius: 20px;
+    position: relative; /* Wymagane do umieszczenia pseudo-elementów i transformacji */
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 77, 0, 0.696)); /* Gradient tła */
+    animation: fadeInDown-again 0.5s ease-out forwards;   
+}
+
+.pt-img:hover {
+    animation: fadeInDown 1s ease-out forwards;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 77, 0, 0.696)); /* Tło podczas hover */
+}
+
+
+.social-icon-git-pt-img{
+    display: grid; 
+    flex-direction: column;
+    margin: 20px auto; 
+    width: fit-content; 
+    animation: fadeInUp 1s ease-out forwards;  
+}
+
+  
+.social-icon-git-pt-img ul {
+    list-style: none; /* Usunięcie kropek z listy */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px; 
+    transform: translateY(60px);
+  }
+  
+  .social-icon-git-pt-img ul li a i { 
+    text-decoration: none;
+    color: #000000;
+    font-size: 5rem;
+    transition: 0.9s all ease; 
+    
+  }
+  
+  .social-icon-git-pt-img ul li a i:hover {
+    transform: scale(1.15);
+    color: #000000; 
+  }
+
+.repo-heading{
+    text-align: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-weight: 650;
+    font-size: 1.3rem;
+    transform: translateY(50px);
+}
 
 
 .pr-name{
@@ -88,3 +209,4 @@
         grid-template-columns: 1fr; /* 1 kolumna */
     }
 }
+
