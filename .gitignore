@@ -1,0 +1,37 @@
+# Ignoruj foldery node_modules w całym repozytorium
+node_modules/
+
+# Ignoruj pliki i foldery tworzone przez npm
+npm-debug.log
+package-lock.json
+yarn-error.log
+yarn.lock
+
+# Ignoruj pliki tworzone przez systemy operacyjne
+.DS_Store           # macOS
+Thumbs.db           # Windows
+
+# Ignoruj pliki zbudowane przez narzędzia do bundlowania
+/dist/
+/build/
+/public/
+
+# Ignoruj pliki konfiguracyjne IDE
+.idea/              # JetBrains IDE (WebStorm, PhpStorm)
+.vscode/            # Visual Studio Code
+*.sublime-workspace # Sublime Text workspace
+
+# Ignoruj pliki cache
+.cache/
+*.log
+*.log.*
+*.tmp
+
+# Ignoruj pliki tymczasowe
+*.swp
+*.bak
+*.bak.*
+
+# Ignoruj pliki, które są za duże
+*.tgz
+*.zip
