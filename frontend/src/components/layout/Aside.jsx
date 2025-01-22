@@ -18,11 +18,11 @@ const Aside = () => {
       <div className='container-information'>
 
         <div className='info'>
-          <div class="column-pht1">
+          <div className="column-pht1">
             {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
             <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank" rel="noopener noreferrer"></a>             
           </div>
-          <div class="column-txt">
+          <div className="column-txt">
             <h3 className='title'>Email:</h3>
             <p className='text'> mikolajmelnyk16@gmail.com </p>
           </div>
@@ -34,18 +34,18 @@ const Aside = () => {
               <div className="clickable-area"></div>
             </CopyToClipboard>
           </div>
-          <div class="column-txt">
+          <div className="column-txt">
             <h3 className='title'>Telefon:</h3>
             <p className='text'>+48 888 508 630</p>
           </div>
         </div>
 
         <div className='info'>
-          <div class="column-pht3">
+          <div className="column-pht3">
             {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
             <a href="https://maps.app.goo.gl/w2bqvvJfdKjTWNGJ8" target="_blank" rel="noopener noreferrer"></a> 
           </div>
-          <div class="column-txt">
+          <div className="column-txt">
             <h3 className='title'>Lokalizacja:</h3>
             <p className='text'>Rzeszów, Polska</p>
           </div>
@@ -53,11 +53,11 @@ const Aside = () => {
 
         
         <div className='info'>
-          <div class="column-pht4">
+          <div className="column-pht4">
             {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
             <a href="https://w.prz.edu.pl/" target="_blank" rel="noopener noreferrer"></a>             
           </div>
-          <div class="column-txt">
+          <div className="column-txt">
             <h3 className='title'>Uczelnia:</h3>
             <p className='text'>Politechnika Rzeszowska Im. Ignacego Łukasiewicza.</p> 
           </div>

@@ -5,20 +5,27 @@
   }
   
   .main-content {
-    display: flex;
-    flex: 1;
+    display: flex; /* Aktywujemy flexbox na kontenerze */
+    flex: 1; /* Kontener będzie elastyczny, dostosowując się do dostępnej przestrzeni */
+    position: relative;
   }
   
   main {
-    flex: 1;
+    flex: 1; /* Main rozciąga się na pozostałą przestrzeń */
     padding: 20px;
+    overflow: hidden; /* Zapobiega przewijaniu zawartości, gdy przestrzeń jest ograniczona */
   }
   
   aside {
-    width: 250px;
-    background-color: #f8f9fa;
-    border-right: 1px solid #ddd;
+    width: clamp(200px, 10vw, 225px); /* Minimalna szerokość 200px, elastyczna 20%, maksymalna 250px */
+    height: 100%; /* Automatyczna wysokość dopasowana do zawartości */
+    overflow: hidden; /* Ukrywa zawartość wychodzącą poza aside */
+    background-color: #f8f9fa; /* Jasne tło */
+    border-right: 1px solid #ddd; /* Linia oddzielająca aside */
+    padding: 20px; /* Odstępy wewnętrzne */
   }
+  
+  
   
   footer {
     background: #333;
@@ -27,3 +34,9 @@
     padding: 10px;
   }
   
+
+  @media (max-width: 1600px){
+    aside{
+      width: 150px;
+    }
+  }

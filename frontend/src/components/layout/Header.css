@@ -1,39 +1,161 @@
 /* Styl dla kontenera nagłówka */
-header {
-  background-color: #333;      /* Tło w ciemnym kolorze */
-  color: #fff;                 /* Kolor tekstu na biały */
-  padding: 0px 50px 0px 25px;  /* Odstępy wewnętrzne */
-  display: flex;               /* Flexbox do ustawiania elementów w jednym wierszu */
-  justify-content: space-between; /* Równo rozmieszczone elementy */
-  align-items: center;         /* Wyrównanie do środka w osi pionowej */
+.Header {
+  position: relative;
+  background-color: #333;
+  color: #fff;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  height: 60px;
 }
 
-header .logo {
-  font-size: 1.5rem;
+.Header h1 {
+  font-size: clamp(1.6rem, 20vw, 1.8rem);
   font-weight: bold;
 }
 
-header nav {
+/* Standardowa nawigacja */
+.Header nav {
   display: flex;
 }
 
-header nav a {
+.Header nav a {
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #fff;
   text-decoration: none;
   margin-left: 20px;
   padding: 10px 16px;
   border-radius: 5px;
   transition: background-color 0.3s ease, text-decoration 0.3s ease;
-  transition: 0.7s all ease;
 }
 
-header nav a.active {
-  background-color: #3d3d3d;  /* Podkreślenie aktywnego linku */
+.Header nav a.active {
+  background-color: #3d3d3d;
 }
 
-header nav a:hover {
-  background-color: #3d3d3d; /* Zmiana tła przy najechaniu */
+.Header nav a:hover {
+  background-color: #3d3d3d;
   transform: scale(1.075);
+}
+
+/* Ikona menu (hamburger) dla małych ekranów */
+.menu-icon {
+  display: none; /* Domyślnie ukryta */
+  cursor: pointer;
+
+}
+
+/* Boczne menu */
+.side-menu {
+  display: grid;
+  position: fixed;
+  top: 0;
+  right: -250px; /* Ukryte poza ekranem po prawej stronie */
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  flex-direction: column;
+  align-items: start;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease; /* Animacja wysuwania z prawej strony */
+  z-index: 1;
+  padding: 50px 0px;
+}
+
+
+.side-menu a {
+  text-decoration: none;
+  margin: 5px 10px ;
+  border-radius: 5px;
+}
+
+.side-menu a.active {
+  background-color: #3d3d3d;
+}
+
+.side-menu a:hover {
+  background-color: #444;
+}
+
+
+
+.line-,.status,.avatar {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+
+.social-icons-p {
+  margin: 10px auto; 
+}
+
+/* Stylizacja listy */
+.social-icons-p ul {
+  list-style: none; /* Usunięcie kropek z listy */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons-p ul li a {
+  padding: 0%;
+  margin: 10px;
+  text-decoration: none;
+  color: #DE5F00;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+
+
+
+/* Przycisk menu dla małych ekranów */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Pokazujemy przycisk na małych ekranach */
+  }
+
+  .Header nav a {
+    margin-left: 0%;
+  }
+
+  
+
+  .side-menu{
+    display: flex;
+    width: 40%;
+    align-items: center;
+  }
+
+  .side-menu.open{
+    animation: fadeInRight-menu 1s ease-out forwards;
+    right: 0;
+    display: flex;
+  }
+
+  /* Styl dla zamkniętego menu */
+  .side-menu.close {
+    animation: fadeInLeft-menu 1s ease-out forwards; /* Animacja przy zamykaniu */
+  }
+
+
+  .Header nav {
+    display: none; /* Ukrywamy nawigację w trybie poziomym */
+  }
+}
+
+@media(max-width: 480px){
+  .side-menu{
+    width: 50%;
+  }
+
+  .name-surname{
+    width: 90%;
+  }
 }

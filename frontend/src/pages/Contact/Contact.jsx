@@ -71,6 +71,7 @@ const Contact = () => {
             <div className="line"></div>
 
             <div className="section-contact-form">
+                
                 <h2 className="title-contact">Formularz kontaktowy</h2>
 
                 <form onSubmit={handleSubmit}>
@@ -110,7 +111,7 @@ const Contact = () => {
                         </div>
 
                         <button className="send-message" type="submit">
-                            Wyślij wiadomość
+                            <p>Wyślij wiadomość</p>
                         </button>
                         {isSubmitted}
                     </div>
@@ -127,7 +128,7 @@ const Contact = () => {
                     />
                     <Marker position={[50.020179, 21.982613]} icon={customIcon}>
                         <Popup>
-                            Akademicka 3, 35-084 Rzeszów
+                            <p>Akademicka 3, 35-084 Rzeszów</p>
                         </Popup>
                     </Marker>
                 </MapContainer>

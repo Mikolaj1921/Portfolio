@@ -3,8 +3,63 @@
     border-radius: 20px;
     background-color: #333;
 }
+/*cointainer for max768px*/
+
+.container-information-about{
+    padding-top: 20px;
+    height: auto;
+    display: none;
+    grid-template-columns: repeat(4, 1fr);  /* Tworzy 4 kolumny o jednakowej szerokości */
+    gap: 20px;                              /* Odstępy między kolumnami */
+    color: white;   
+}
+
+
+.info-about{
+    animation: fadeInRight 1s ease-out forwards;
+    display: grid;
+    grid-template-rows: 20% 80%;
+}
+
+
+
+.column-pht1,.column-pht2,.column-pht3,.column-pht4{
+    justify-self: center;
+    align-self: center;
+    background-size: cover;  /* Dopasowanie obrazu do kontenera, bez rozciągania */
+    background-position: center;  /* Wycentrowanie obrazu */
+    background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    transition: 0.7s all ease;
+  
+  }
+  
+  .column-pht1 a,.column-pht2 a,.column-pht3 a,.column-pht4 a{
+    position: absolute; /* Link obejmuje cały kontener */
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    display: block; /* Link jako blokowy, aby wypełniał cały kontener */
+    text-decoration: none; /* Usunięcie domyślnego podkreślenia */
+  }
+  
+  .column-pht1:hover,.column-pht2:hover,.column-pht3:hover,.column-pht4:hover{
+    transform: scale(1.15);
+  }
+
+
+  .text{
+    width: 100%;
+  }
+
+
+
 
 .sub_title_h1{
+    font-size: clamp(1.4rem , 0.5vw , 1.8rem);
     text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
     color: rgb(231, 231, 231);
     animation: fadeInLeft 1s ease-out forwards;
@@ -12,7 +67,7 @@
 
 .about-me-text{
     animation: fadeInRight 1s ease-out forwards;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 0.5vw, 1.25rem);
     font-family: 'Roboto' , sans-serif;
     color: rgb(176, 176, 176);
     padding-bottom: 5px;
@@ -43,6 +98,7 @@
   
 /*what i'm doing*/
 .section-what-im-doing{
+    padding-top: 15px;
     width: 100%;
     justify-items: center;
     display: grid;
@@ -57,12 +113,14 @@
     display: grid;
     gap: 20px;
     background-color: #202020;
-    width: 75%;
-    height: 80%;
+    max-width: 75%;
+    width: clamp(65%, 10vw, 75%);
+    height: 77.5%;
     padding: 0px 10px 15px 10px;
     border-radius: 20px;
     transition: 0.9s all ease;
 }
+
 
 .p2,.p3,.p4{
     box-shadow: 10px 10px 15px rgba(120, 120, 120, 0.1);
@@ -94,72 +152,111 @@
     background-image: url('../../assets/images/database.png');
 }
 
-.column-photo1,.column-photo2,.column-photo3,.column-photo4{
+.column-photo1, .column-photo2, .column-photo3, .column-photo4 {
     justify-self: center;
     align-self: center;
-    background-size: cover;  /* Dopasowanie obrazu do kontenera, bez rozciągania */
+    background-size: cover;       /* Dopasowanie obrazu do kontenera */
     background-position: center;  /* Wycentrowanie obrazu */
     background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
-    width: 70px;
-    height: 72.5px;
-}
-.column-photo1{
-    height: 80px;
+    width: 10vw;                  /* Szerokość zależna od szerokości ekranu */
+    height: auto;                 /* Wysokość dostosowuje się do proporcji obrazu */
+    max-width: 55%;              /* Zapobiega wyjściu poza obszar kontenera */
+    aspect-ratio: 55 / 57.5;      /* Zachowanie proporcji obrazu */
+    border-radius: 10px;          /* Opcjonalne zaokrąglenie rogów */
 }
 
+
+.column-photo1{
+    max-width: 65%;   
+}
+
+.column-text h2{
+    font-size: clamp(1.4rem, 0.5vw, 1.8rem);
+}
 
 .doing-text{
+    font-size: clamp(1rem, 0.5vw, 1.15rem); /* Elastyczny rozmiar tekstu */
     width: 90%;
     padding-bottom: 10px;
 }
 
-/*hobby*/
-
-.hobby{
-    font-size: 1.7rem;
+/* Для заголовка */
+.hobby {
+    font-size: clamp(1.4rem , 0.5vw , 1.8rem);
     animation: fadeInLeft 1s ease-out forwards;
 }
 
-.section-hobby{
+/* Стилі для секції */
+.section-hobby {
+    
     color: #bdbdbd;
-    font-size: 1.25rem;
     padding: 10px 25px;
     text-decoration: none;
     border-radius: 20px;
     margin: 20px;
     background-color: #404040;
     padding-bottom: 15px;
-}
 
-.section-hobby p{
+    
+  }
+  
+
+  
+  .section-hobby p{
     animation: fadeInRight 1s ease-out forwards;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 0.5vw, 1.15rem);
     font-family: 'Roboto' , sans-serif;
+   }
+  
+
+/* Анімація fadeInLeft для заголовка */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Анімація fadeInRight для параграфів */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 
-/*Skills*/
-
+/* Skills */
 .Skills {
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0px;
   }
-
-  .sub_title_h1_up{
+  
+  .sub_title_h1_up {
+    font-size: clamp(1.4rem, 0.5vw, 1.8rem);
     text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
     color: rgb(231, 231, 231);
     animation: fadeInUplow 1s ease-out forwards;
-}
-  
+  }
   
   .skills-carousel {
     animation: fadeInDownlow 1s ease-out forwards;
-    margin-top: 40px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    margin-top: 40px;
+    overflow: hidden;  /* Ukrywamy zawartość, która wychodzi poza kontener */
   }
   
   .skills-track {
@@ -171,19 +268,19 @@
   
   .skill {
     flex: 0 0 auto;
-    width: 100px;
+    padding: 0px 25px;
     text-align: center;
     font-size: 16px;
     color: #333;
     transition: transform 0.5s ease-in-out;
   }
-
-  .skill:hover{
+  
+  .skill:hover {
     transform: scale(1.2);
   }
   
   .skill i {
-    font-size: 48px;
+    font-size: clamp(1.4rem, 2vw, 3rem);
     margin-bottom: 10px;
   }
   
@@ -192,13 +289,15 @@
     color: #666;
   }
 
+  
 
 /*why it*/  
   .story-text{
     animation: fadeInRight 1s ease-out forwards;
     font-family: 'Roboto' , sans-serif;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 0.5vw, 1.2rem);
     color: rgb(176, 176, 176);
+    padding-bottom: 10px;
 } 
 
 
@@ -214,22 +313,25 @@
 
 .contact-text{
     animation: fadeInDownlow 1s ease-out forwards;
-    padding-top: 20px;
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 0.5vw, 1.25rem);
     text-align: center;
     color: white;
+    padding: 20px 5px 5px 5px;
 }
 
 .contact-click{
+    font-size: clamp(1rem, 0.5vw, 1.5rem);
     animation: fadeInDownlow 1s ease-out forwards;
-    margin-left: 35%;
-    width: 30%;
-    padding-top: 10px;
+    
+    width: 20vw;                  /* Szerokość zależna od szerokości ekranu */
+    max-width: 100%;              /* Zapobiega wyjściu poza obszar kontenera */
+    aspect-ratio: 100;      /* Zachowanie proporcji obrazu */
+    padding: 15px ;
+    justify-self: center;
     border-radius: 40px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.411);
     color: rgb(231, 231, 231);
-    padding-bottom: 20px;
     transition: 0.9s all ease;
 }
 
@@ -240,4 +342,176 @@
 
 .buttoninfo {
     text-decoration: none; /* Usuwa podkreślenie */
+}
+
+
+@media (max-width: 1200px){
+    .section-what-im-doing{
+        width: 100%;
+        justify-items: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Dwie równe kolumny */
+        gap: 20px;                             /* Odstępy między elementami */
+        color: white;
+        animation: fadeInLeft 1s ease-out;
+    }
+    .doing-text{
+        font-size: clamp(0.85rem, 0.5vw, 1rem); /* Elastyczny rozmiar tekstu */
+    }
+    .column-text h2{
+        font-size: clamp(1.2rem, 0.5vw, 1.4rem);
+    }
+
+    .skills-track{
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+
+    .skill{
+        overflow: hidden;
+    }
+
+
+    .contact-click {
+        width: 50%;
+        font-size: 0.95rem;
+        margin: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;  /* Wyrównanie poziome */
+        align-items: center;      /* Wyrównanie pionowe */
+        height: 50px;              /* Wysokość 100% w celu wyśrodkowania w pionie */
+    }
+
+
+}
+
+@media (max-width: 768px){
+    .p1, .p2, .p3, .p4{
+        width: 80%;
+        max-width: 100%;
+    }
+    .column-text h2{
+        font-size: clamp(1.1rem, 0.5vw, 1.2rem);
+    }
+
+    .container-information-about{
+        display: grid;
+    }
+}
+
+@media (max-width: 620px){
+    .container-information-about{
+        gap: 0;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 10px;
+    }
+
+    .info{
+        margin: 5px;
+    }
+}
+
+
+@media (max-width: 480px){
+    .p1, .p2, .p3, .p4{
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .contact-click {
+        font-size: 0.95rem;
+        margin: 20px;
+        padding: 20px;
+        width: 50%;
+        text-align: center;
+        display: flex;
+        justify-content: center;  /* Wyrównanie poziome */
+        align-items: center;      /* Wyrównanie pionowe */
+        height: 50px;              /* Wysokość 100% w celu wyśrodkowania w pionie */
+    }
+
+    .sub_title_h1_up{
+        font-size: clamp(1.2rem, 0.5vw, 1.4rem);
+    }
+
+    .skills-track{
+        
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .container-information-about{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 340px){
+    .about-me-text{
+        font-size: clamp(0.9rem, 0.5vw, 1rem);
+    }
+
+    /*what i'm doing*/
+    .section-what-im-doing{
+        grid-template-columns: 100%;
+    }
+    
+    .column-photo1,.column-photo2,.column-photo3,.column-photo4{
+        display: none;
+    }
+
+    .p1, .p2, .p3, .p4{
+        grid-template-columns: 100%;
+        width: 96%;
+        max-width: 100%;
+    }
+    
+    .column-text h2{
+        text-align: center;
+        font-size: clamp(1.05rem, 0.5vw, 1.1rem);
+    }
+
+    .doing-text{
+        text-align: center;
+        width: 100%;
+        font-size: clamp(0.8rem, 0.5vw, 0.85rem); /* Elastyczny rozmiar tekstu */
+    }
+
+    /*hobby*/
+    .section-hobby{
+        margin: 2px;
+    }
+
+    .hobby{
+        font-size: clamp(1.2rem , 0.5vw , 1.4rem);
+    }
+
+    .section-hobby p{
+        font-size: clamp(0.9rem, 0.5vw, 1rem);
+    }
+
+    /*why it*/
+    .sub_title_h1{
+        font-size: clamp(1.2rem , 0.5vw , 1.4rem);
+    }
+
+    .story-text{
+        font-size: clamp(0.9rem, 0.5vw, 1rem);
+    }
+
+    /*contact*/
+
+    .Contact{
+        margin: 2px;
+    }
+
+    .contact-text{
+        font-size: clamp(0.9rem, 0.5vw, 1rem);
+    }
+
+    
+    
 }

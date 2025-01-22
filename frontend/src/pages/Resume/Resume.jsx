@@ -155,6 +155,69 @@ const Resume = () => {
                         </div>
                     </div>
                 </section>
+                
+                <div className="title-aside-r-low">
+                        <h1>Skills & Language</h1>
+                </div>
+
+                <div className="aside-content-low"> 
+                    
+                    <div className="skills">
+                        <h2>Umiejętności</h2>
+                        <div className="line"></div>
+
+                        <div className="skills-column">
+                            <div className="skill-col">
+                                <div className="min-image-skill1"></div>
+                                <li className="name-skill">HTML</li>
+                                <div className="min-image-skill2"></div>
+                                <li className="name-skill">CSS</li>
+                                <div className="min-image-skill3"></div>
+                                <li className="name-skill">JavaScript</li>
+                                <div className="min-image-skill4"></div>
+                                <li className="name-skill">React</li>
+                                <div className="min-image-skill5"></div>
+                                <li className="name-skill">Node.js</li>
+                                <div className="min-image-skill6"></div>
+                                <li className="name-skill">Express.js</li>
+                                <div className="min-image-skill7"></div>
+                                <li className="name-skill">PostgreSQL</li>
+                                <div className="min-image-skill8"></div>
+                                <li className="name-skill">Git</li>
+                                <div className="min-image-skill9"></div>
+                                <li className="name-skill">GitHub</li>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                    <div className="lang">
+                        <h2>Znajomość języków</h2>
+                        <div className="line"></div>
+                        <div className="lang-column">
+                            <div className="name-lang">
+                                <li className="left-li">
+                                    <strong>Język Polski:</strong> {languageLevels.polish}
+                                    {renderProgressBar(languageLevels.polish)}
+                                </li>
+                                <li className="right-li">
+                                    <strong>Język Angielski:</strong> {languageLevels.english}
+                                    {renderProgressBar(languageLevels.english)}
+                                </li>
+                                <li className="left-li">
+                                    <strong>Język Ukraiński:</strong> {languageLevels.ukrainian}
+                                    {renderProgressBar(languageLevels.ukrainian)}
+                                </li>
+                                <li className="right-li">
+                                    <strong>Język Rosyjski:</strong> {languageLevels.russian}
+                                    {renderProgressBar(languageLevels.russian)}
+                                </li>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
 
                 <section className="info-section">
                     <h2 className="subtitle_r">Informacje dodatkowe</h2>
@@ -187,6 +250,8 @@ const Resume = () => {
                     </div>
                 </section>
             </div>
+
+            
             
 
             <div className="aside-content"> 

@@ -96,3 +96,33 @@
       transform: translateY(0);
     }
   }
+
+
+
+
+
+
+
+
+
+  /*dla header menu*/
+
+  @keyframes fadeInRight-menu {
+    0% {
+        transform: translateX(100%); /* Текст появляется слева */
+    }
+    20% {
+   
+        transform: translateX(0px); /* Текст приходит в изначальное положение */
+    }
+  }
+
+  @keyframes fadeInLeft-menu {
+    0% {
+        transform: translateX(0); /* Текст появляется слева */
+    }
+    20% {
+   
+        transform: translateX(100%); /* Текст приходит в изначальное положение */
+    }
+  }

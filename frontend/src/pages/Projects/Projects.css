@@ -5,6 +5,7 @@
 }
 
 .title_h1{
+    font-size: clamp(1.4rem, 0.5vw, 1.8rem);
     text-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
     color: rgb(231, 231, 231);
     opacity: 0;  
@@ -121,20 +122,25 @@
 
 
 .pt-img {
+    z-index: -10;
     width: 100%;
     height: 100%; /* Przykładowa wysokość, dostosuj do potrzeb */
-    z-index: -1; /* Ustawia wyższy poziom nakładania się, aby element był na wierzchu */
+    opacity: 0; /* Ustawia wyższy poziom nakładania się, aby element był na wierzchu */
     border-radius: 20px;
     position: relative; /* Wymagane do umieszczenia pseudo-elementów i transformacji */
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 77, 0, 0.696)); /* Gradient tła */
-    animation: fadeInDown-again 0.5s ease-out forwards;   
 }
 
 .pt-img:hover {
+    z-index: 1;
+    opacity: 1;
     animation: fadeInDown 1s ease-out forwards;
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 77, 0, 0.696)); /* Tło podczas hover */
 }
 
+.pt-img:not(:hover){
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 77, 0, 0.263)); /* Gradient tła */
+    animation: fadeInDown-again 0.5s ease-out forwards;   
+}
 
 .social-icon-git-pt-img{
     display: grid; 
@@ -207,6 +213,28 @@
 @media (max-width: 1400px) {
     .section-projects {
         grid-template-columns: 1fr; /* 1 kolumna */
+    }
+}
+
+
+@media (max-width: 1200px){
+    .column-pt1, .column-pt2, .column-pt3, .column-pt4 {
+        width: clamp(400px , 35vw , 450px);
+        height: clamp(220px , 20vw , 250px);
+    }
+}
+
+@media (max-width: 768px){
+    .column-pt1, .column-pt2, .column-pt3, .column-pt4 {
+        width: clamp(250px , 55vw , 450px);
+        height: clamp(150px , 33vw , 220px);
+    }
+}
+
+@media (max-width: 340px){
+    .column-pt1, .column-pt2, .column-pt3, .column-pt4 {
+        width: clamp(200px , 55vw , 250px);
+        height: clamp(110px , 30vw , 150px);
     }
 }
 

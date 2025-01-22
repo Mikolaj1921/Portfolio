@@ -20,7 +20,7 @@ const Projects = () => {
 
             <div className='section-projects'>
                 <div className='pr1'>
-                    <div class="column-pt1">
+                    <div className="column-pt1">
                         <div className="pt-img">
                             <div className="social-icon-git-pt-img">
                                 <ul>
@@ -32,20 +32,20 @@ const Projects = () => {
                                 </ul>
                             </div>
                             <div className="repo-heading">
-                                GitHub Repository
+                                <p>GitHub Repository</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-text">
+                    <div className="col-text">
                         <div className="pr-name">Słodka Chwila</div>
-                        <p className='-text'>
-                            Web Development, React, CSS, Node.js, Express.js, PostgreSQL
-                        </p>
+                        <div className='-text'>
+                            <p>Web Development, React, CSS, Node.js, Express.js, PostgreSQL</p>
+                        </div>
                     </div>
                 </div>
 
                 <div className='pr2'>
-                    <div class="column-pt2">
+                    <div className="column-pt2">
                         <div className="pt-img">
                             <div className="social-icon-git-pt-img">
                                 <ul>
@@ -57,20 +57,20 @@ const Projects = () => {
                                 </ul>
                             </div>
                             <div className="repo-heading">
-                                GitHub Repository
+                                <p>GitHub Repository</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-text">
+                    <div className="col-text">
                     <div className="pr-name">Management Consulting</div>
-                        <p className='-text'>
-                        Web Development, React, CSS, Node.js, Express.js, PostgreSQL
-                        </p>
+                        <div className='-text'>
+                            <p>Web Development, React, CSS, Node.js, Express.js, PostgreSQL</p>
+                        </div>
                     </div>
                 </div>
 
                 <div className='pr3'>
-                    <div class="column-pt3">
+                    <div className="column-pt3">
                         <div className="pt-img">
                             <div className="social-icon-git-pt-img">
                                 <ul>
@@ -82,20 +82,20 @@ const Projects = () => {
                                 </ul>
                             </div>
                             <div className="repo-heading">
-                                GitHub Repository
+                                <p>GitHub Repository</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-text">
+                    <div className="col-text">
                     <div className="pr-name">Dental Clinic</div>
-                        <p className='-text'>
-                            C#, .NET, SQL Server, WinForm Application
-                        </p>
+                        <div className='-text'>
+                            <p>C#, .NET, SQL Server, WinForm Application</p>
+                        </div>
                     </div>
                 </div>
 
                 <div className='pr4'>
-                    <div class="column-pt4">
+                    <div className="column-pt4">
                         <div className="pt-img">
                             <div className="social-icon-git-pt-img">
                                 <ul>
@@ -107,11 +107,11 @@ const Projects = () => {
                                 </ul>
                             </div>
                             <div className="repo-heading">
-                                GitHub Repository
+                                <p>GitHub Repository</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-text">
+                    <div className="col-text">
                     <div className="pr-name">Portfolio</div>
                         <p className='-text'>
                         Web Development, React, CSS, Node.js, Express.js, PostgreSQL

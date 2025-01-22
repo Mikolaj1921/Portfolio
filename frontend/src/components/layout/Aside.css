@@ -1,5 +1,4 @@
 .Aside {
-    max-height: 80vh;
     background-color: #333;    /* Jasne tło */
     padding: 20px;                /* Odstępy wewnętrzne */
     border-radius: 30px;
@@ -9,21 +8,23 @@
     border: 0px solid #333; /* Tymczasowe obramowanie */
   }
   
-  .avatar{
+  .avatar {
     background-image: url('../../assets/images/awatar.jpg');
-    background-size: cover;  /* Dopasowanie obrazu do kontenera, bez rozciągania */
-    background-position: center;  /* Wycentrowanie obrazu */
+    background-size: cover; /* Dopasowanie obrazu do kontenera, bez rozciągania */
+    background-position: center; /* Wycentrowanie obrazu */
     background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
-    height: 180px;  /* Ustawienie stałej wysokości dla aside */
-    width: 66%;  /* Szerokość na 100% szerokości kontenera */
-    border-radius: 20px;  /* Opcjonalnie zaokrąglone rogi */
+    height: clamp(120px, 10vw, 150px); /* Zmiana 0.5vw na 10vw, by była bardziej zauważalna */
+    width: clamp(110px, 10vw, 140px); /* Szerokość na 66% szerokości kontenera */
+    border-radius: 20px; /* Zaokrąglone rogi */
     justify-self: center;
+    display: block; /* Zapewnia elastyczność, jeśli trzeba */
   }
+  
 
   .name-surname {
     text-align: center;
     color: #dbdbdb;
-    font-size: 1.6rem;
+    font-size: clamp(1.4rem, 0.5vw, 1.6rem);
     margin-bottom: 20px;
   }
 
@@ -31,7 +32,7 @@
     box-shadow: 2.5px 2.5px 10px rgba(0, 0, 0, 0.304);
     text-align: center;
     color: #dbdbdb;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 0.5vw, 1rem);
     border-radius: 20px;
     padding: 5px;
     justify-self: center;
@@ -47,10 +48,11 @@
   
 
   .line- {
+    justify-self: center;
     background-color: #404040;
     border-radius: 20px;
     height: 2px;
-    width: 100%;
+    width: clamp(80%, 20%, 100%);
     margin-bottom: 10px;
   }
 
@@ -121,7 +123,7 @@
 }
 
 .text {
-  font-size: 0.9rem;
+  font-size: clamp(0.7rem, 0.5vw, 0.75rem);
   width: 90%;
   margin-top: 0;  /* Zmniejszenie marginesu górnego, jeśli jest ustawiony */
 }
@@ -157,7 +159,31 @@
 .social-icon ul li a:hover {
   color: #dbdbdb; 
 }
-  
+
+
+@media (max-width: 1600px) {
+  /* Zmiana układu dla .info, aby elementy były w jednej kolumnie */
+  .info {
+    grid-template-columns: 100%; /* Ustawienie jednej kolumny */
+    gap: 0px; /* Dodanie odstępu między elementami w .info */
+    margin-bottom: 10px;
+  }
+
+  /* Wyświetlanie tekstu */
+  .title,
+  .text {
+    display: block; /* Zapewnienie, że tekst będzie widoczny */
+    text-align: center; /* Wyrównanie tekstu do środka */
+  }
+
+
+}
+
+
 
   
- 
+@media (max-width: 768px){
+  .Aside{
+    display: none;
+  }
+}

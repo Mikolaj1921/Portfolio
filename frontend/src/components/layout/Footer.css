@@ -1,5 +1,6 @@
 /* Styl dla stopki */
 footer {
+    z-index: 1;
     background-color: #333;      /* Tło w ciemnym kolorze */
     color: #fff;                 /* Kolor tekstu na biały */
     padding: 20px;               /* Odstępy wewnętrzne */
