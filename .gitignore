@@ -1,6 +1,7 @@
 # Ignoruj foldery node_modules w całym repozytorium
 node_modules/
 
+
 # Ignoruj pliki i foldery tworzone przez npm
 npm-debug.log
 package-lock.json
