@@ -1,25 +1,12 @@
+// server.js
 require('dotenv').config(); // Wczytanie zmiennych środowiskowych z pliku .env
-const cors = require('cors');
-const express = require('express'); // Importujemy Express
-const app = express();             // Tworzymy instancję aplikacji
+const express = require('express');
+const corsSetup = require('./middleware/corsSetup'); // Importujemy naszą konfigurację CORS
+const app = express();
 const contactRoute = require('./routes/contact');
 
-// Pobranie dozwolonych domen z zmiennej środowiskowej
-const allowedOrigins = [process.env.CORS_ALLOWED_ORIGINS || 'http://localhost:3000'];
-
 // Middleware do CORS
-app.use(cors({
-  origin: (origin, callback) => {
-      // Zezwól na żądania z dozwolonych originów lub bez origin (Postman itp.)
-      if (!origin || allowedOrigins.includes(origin)) {
-          callback(null, true);
-      } else {
-          callback(new Error('Nieautoryzowany origin: ' + origin));
-      }
-  },
-  methods: ["GET", "POST"], // Dozwolone metody HTTP
-  credentials: true // Umożliwia przesyłanie ciasteczek lub nagłówków autoryzacyjnych
-}));
+app.use(corsSetup); // Zastosowanie konfiguracji CORS w całej aplikacji
 
 // Logowanie żądań (przydatne do debugowania)
 app.use((req, res, next) => {
@@ -30,17 +17,17 @@ app.use((req, res, next) => {
 // Middleware do obsługi JSON
 app.use(express.json());
 
-//Endpoints
+// Endpointy
 
 // Prosta trasa
 app.get('/', (req, res) => {
   res.send('Witaj na backendzie Node.js!');
 });
 
-//trasa do kontaktu
+// Trasa do kontaktu
 app.use('/contact', contactRoute);
 
-//Errors
+// Obsługa błędów
 
 // Obsługa błędów dla nieznanych tras (404)
 app.use((req, res) => {
@@ -52,8 +39,6 @@ app.use((err, req, res, next) => {
   console.error("Błąd serwera:", err.stack);
   res.status(500).json({ error: "Wewnętrzny błąd serwera" });
 });
-
-//RUN SERVER
 
 // Uruchomienie serwera
 const PORT = process.env.PORT || 5000;

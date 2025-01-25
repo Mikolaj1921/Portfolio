@@ -14,7 +14,7 @@ const customIcon = new L.Icon({
   popupAnchor: [0, -40],
 });
 
-const apiUrl = [process.env.REACT_APP_API_URL || "http://localhost:5000"];
+const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
