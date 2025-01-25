@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
 import '../Animation.css'
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import {Link} from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
@@ -36,7 +36,7 @@ const About = () => {
             <meta property="og:title" content="O mnie - Portfolio Frontend Developera" />
             <meta property="og:description" content="Buduję responsywne aplikacje w React.js i Node.js. Poznaj moje umiejętności i zainteresowania." />
             <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://twojeportfolio.com/about" />
+            <meta property="og:url" content="https://twojeportfolio.com/" />
             <meta name="robots" content="index, follow" />
 
             {/* Dane strukturalne */}

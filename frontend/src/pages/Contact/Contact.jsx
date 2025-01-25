@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import 'leaflet/dist/leaflet.css';
 import './Contact.css';
 import '../Animation.css';

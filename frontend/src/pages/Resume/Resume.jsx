@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import './Resume.css';
 import '../Animation.css'
 import {Link } from 'react-router-dom';
@@ -15,9 +15,13 @@ const Resume = () => {
       // Funkcja do obliczenia, które segmenty mają być pomarańczowe, a które szare
       const getLevelColor = (level) => {
         const levels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+        if (!levels.includes(level)) {
+          level = 'A1';  // Domyślny poziom, jeśli nie znaleziono
+        }
         const levelIndex = levels.indexOf(level);
         return levels.map((_, index) => (index <= levelIndex ? 'orange' : 'gray'));
       };
+      
     
       // Funkcja renderująca pasek postępu dla każdego języka
       const renderProgressBar = (level) => {
