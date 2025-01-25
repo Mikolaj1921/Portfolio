@@ -1,16 +1,11 @@
-//main server
 require('dotenv').config(); // Wczytanie zmiennych środowiskowych z pliku .env
 const cors = require('cors');
 const express = require('express'); // Importujemy Express
 const app = express();             // Tworzymy instancję aplikacji
 const contactRoute = require('./routes/contact');
 
-const allowedOrigins = [
-  'http://localhost:3000',  // Twoja aplikacja frontendowa (zmień na odpowiednią domenę)
-  'http://localhost:5000',  // Serwer backendowy
-  // Dodaj inne domeny, które mogą się łączyć z serwerem
-];
-
+// Pobranie dozwolonych domen z zmiennej środowiskowej
+const allowedOrigins = [process.env.CORS_ALLOWED_ORIGINS || 'http://localhost:3000'];
 
 // Middleware do CORS
 app.use(cors({
@@ -35,9 +30,6 @@ app.use((req, res, next) => {
 // Middleware do obsługi JSON
 app.use(express.json());
 
-
-
-
 //Endpoints
 
 // Prosta trasa
@@ -46,10 +38,7 @@ app.get('/', (req, res) => {
 });
 
 //trasa do kontaktu
-app.use('/contact', contactRoute); 
-
-
-
+app.use('/contact', contactRoute);
 
 //Errors
 
@@ -64,11 +53,10 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: "Wewnętrzny błąd serwera" });
 });
 
-
 //RUN SERVER
 
 // Uruchomienie serwera
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Serwer działa na http://localhost:${PORT}`);
 });
