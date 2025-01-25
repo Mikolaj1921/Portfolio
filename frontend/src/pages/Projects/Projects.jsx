@@ -17,7 +17,7 @@ const Projects = () => {
                 <meta property="og:title" content="Projekty - Portfolio Web Developera" />
                 <meta property="og:description" content="Zapoznaj się z moimi projektami programistycznymi, w tym aplikacjami webowymi i desktopowymi." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://twojeportfolio.com/projects" />
+                <meta property="og:url" content="http://mikolajmelnyk.com.pl/Projects" />
                 <meta name="robots" content="index, follow" />
             </Helmet>
             

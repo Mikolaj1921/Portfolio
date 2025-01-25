@@ -78,7 +78,7 @@ const Contact = () => {
                 <meta property="og:title" content="Kontakt - Portfolio Frontend Developera" />
                 <meta property="og:description" content="Napisz do mnie wiadomość lub odwiedź mnie w biurze w Rzeszowie." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://twojeportfolio.com/contact" />
+                <meta property="og:url" content="http://mikolajmelnyk.com.pl/Contact" />
                 <meta name="robots" content="index, follow" />
             </Helmet>
 

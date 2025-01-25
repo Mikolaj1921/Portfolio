@@ -36,7 +36,7 @@ const About = () => {
             <meta property="og:title" content="O mnie - Portfolio Frontend Developera" />
             <meta property="og:description" content="Buduję responsywne aplikacje w React.js i Node.js. Poznaj moje umiejętności i zainteresowania." />
             <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://twojeportfolio.com/" />
+            <meta property="og:url" content="http://mikolajmelnyk.com.pl/" />
             <meta name="robots" content="index, follow" />
 
             {/* Dane strukturalne */}
@@ -47,7 +47,7 @@ const About = () => {
                 "@type": "Person",
                 "name": "Mikołaj Melnyk",
                 "jobTitle": "Web Developer",
-                "url": "https://twojeportfolio.com/",
+                "url": "http://mikolajmelnyk.com.pl/",
                 "sameAs": [
                     "https://www.linkedin.com/in/miko%C5%82aj-melnyk-634213335/",
                     "https://github.com/Mikolaj1921"

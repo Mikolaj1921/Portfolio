@@ -54,7 +54,7 @@ const Resume = () => {
                 <meta property="og:title" content="Resume - Portfolio Web Developera" />
                 <meta property="og:description" content="Zapoznaj się z moimi doświadczeniami, umiejętnościami i projektami programistycznymi. Portfolio obejmuje zarówno projekty front-endowe, jak i back-endowe." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://twojeportfolio.com/projects" />
+                <meta property="og:url" content="http://mikolajmelnyk.com.pl/Resume" />
                 <meta name="robots" content="index, follow" />
             </Helmet>
 
