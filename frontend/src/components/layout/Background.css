@@ -1,5 +1,22 @@
+.background-wrapper {
+    position: fixed ;
+    width: 100%;
+    height: 100vh; /* или другая высота по вашему усмотрению */
+  }
+  
+  .blur-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px); /* или любое другое значение размытия */
+    background-color: rgba(0, 0, 0, 0.1); /* легкий полупрозрачный слой для лучшего эффекта */
+    pointer-events: none; /* чтобы клики проходили сквозь этот слой к частицам */
+  }
+  
+
 @media (max-width: 1200px){
-    #tsparticles{
-        display: none;
+    #tsparticles,.background-wrapper{
+      display: none;
     }
+
 }

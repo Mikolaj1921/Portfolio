@@ -1,7 +1,8 @@
 /* Styl dla kontenera nagłówka */
 .Header {
   position: relative;
-  background-color: #333;
+  background-color: hsla(0, 0%, 17%, 0.75);
+  backdrop-filter: blur(5px);
   color: #fff;
   padding: 0px 20px;
   display: flex;
@@ -112,11 +113,18 @@
   transition: color 0.3s ease, transform 0.3s ease; 
 }
 
+@media (max-width: 1200px) {
+  .Header{
+    background-color: #333;
+    backdrop-filter: none;
+  }
+}
 
 
 
 /* Przycisk menu dla małych ekranów */
 @media (max-width: 768px) {
+
   .menu-icon {
     display: block; /* Pokazujemy przycisk na małych ekranach */
   }

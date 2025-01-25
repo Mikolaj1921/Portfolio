@@ -29,7 +29,7 @@ const Header = () => {
         setTimeout(() => {
           setIsMenuOpen(false); // Po zakończeniu animacji ustawiamy menu jako zamknięte
           setIsClosing(false);
-        }, 300); // Dopasuj czas do długości animacji
+        }, 200); // Dopasuj czas do długości animacji
       }
     };
 

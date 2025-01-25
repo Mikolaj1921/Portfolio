@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
+import { Helmet } from 'react-helmet';
 import 'leaflet/dist/leaflet.css';
 import './Contact.css';
 import '../Animation.css';
@@ -65,75 +66,97 @@ const Contact = () => {
     };
 
     return (
-        <div className="contact-container">
-            
-            <h1 className="title_h1">Kontakt</h1>
-            <div className="line"></div>
+        <>
+            <Helmet>
+                <html lang="pl" />
+                <title>Kontakt - Portfolio Web Developera</title>
+                <meta 
+                    name="description" 
+                    content="Skontaktuj się ze mną za pomocą formularza lub znajdź mnie na mapie. Frontend Developer, specjalizuję się w React.js, Node.js i Tailwind CSS." 
+                />
+                <meta name="keywords" content="resume, web developer, portfolio, React, Node.js, C#, front-end, back-end, JavaScript, HTML, CSS, PostgreSQL" />
+                <meta property="og:title" content="Kontakt - Portfolio Frontend Developera" />
+                <meta property="og:description" content="Napisz do mnie wiadomość lub odwiedź mnie w biurze w Rzeszowie." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://twojeportfolio.com/contact" />
+                <meta name="robots" content="index, follow" />
+            </Helmet>
 
-            <div className="section-contact-form">
+            <div className="contact-container">
                 
-                <h2 className="title-contact">Formularz kontaktowy</h2>
+                <h1 className="title_h1">Kontakt</h1>
+                <div className="line"></div>
 
-                <form onSubmit={handleSubmit}>
-                    <div className="contact-form-up">
-                        <div className="input-container-namesurname">
-                            <input
-                                className="first-text"
-                                type="text"
-                                name="name"
-                                placeholder="Imię i nazwisko"
-                                value={formData.name}
-                                onChange={handleChange}
-                            />
+                <div className="section-contact-form">
+                    
+                    <h2 className="title-contact">Formularz kontaktowy</h2>
+
+                    <form onSubmit={handleSubmit}>
+                        <div className="contact-form-up">
+                            <div className="input-container-namesurname">
+                                <input
+                                    className="first-text"
+                                    type="text"
+                                    name="name"
+                                    placeholder="Imię i nazwisko"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    autoComplete="name" 
+                                    required
+                                />
+                            </div>
+
+                            <div className="input-container-email">
+                                <input
+                                    className="twice-email"
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    autoComplete="email" 
+                                    required
+                                />
+                            </div>
                         </div>
 
-                        <div className="input-container-email">
-                            <input
-                                className="twice-email"
-                                type="email"
-                                name="email"
-                                placeholder="Email"
-                                value={formData.email}
-                                onChange={handleChange}
-                            />
+                        <div className="contact-form-down">
+                            <div className="input-container-message">
+                                <textarea
+                                    className="message"
+                                    name="message"
+                                    placeholder="Wiadomość"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    autoComplete="off"
+                                ></textarea>
+                            </div>
+
+                            <button className="send-message" type="submit">
+                                <p>Wyślij wiadomość</p>
+                            </button>
+                            {isSubmitted}
                         </div>
-                    </div>
-
-                    <div className="contact-form-down">
-                        <div className="input-container-message">
-                            <textarea
-                                className="message"
-                                name="message"
-                                placeholder="Wiadomość"
-                                value={formData.message}
-                                onChange={handleChange}
-                            ></textarea>
-                        </div>
-
-                        <button className="send-message" type="submit">
-                            <p>Wyślij wiadomość</p>
-                        </button>
-                        {isSubmitted}
-                    </div>
-                </form>
+                    </form>
 
 
+                </div>
+
+                <div className="section-map">
+                    <MapContainer center={[50.020179, 21.982613]} zoom={15} style={{ height: '500px', width: '100%' }}>
+                        <TileLayer
+                            url="https://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/{z}/{x}/{y}{r}.png"
+                            attribution='&copy; <a href="https://www.carto.com/">Carto</a>, <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        />
+                        <Marker position={[50.020179, 21.982613]} icon={customIcon}>
+                            <Popup>
+                                <p>Akademicka 3, 35-084 Rzeszów</p>
+                            </Popup>
+                        </Marker>
+                    </MapContainer>
+                </div>
             </div>
-
-            <div className="section-map">
-                <MapContainer center={[50.020179, 21.982613]} zoom={15} style={{ height: '500px', width: '100%' }}>
-                    <TileLayer
-                        url="https://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/{z}/{x}/{y}{r}.png"
-                        attribution='&copy; <a href="https://www.carto.com/">Carto</a>, <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    />
-                    <Marker position={[50.020179, 21.982613]} icon={customIcon}>
-                        <Popup>
-                            <p>Akademicka 3, 35-084 Rzeszów</p>
-                        </Popup>
-                    </Marker>
-                </MapContainer>
-            </div>
-        </div>
+        </>
     );
 };
 
