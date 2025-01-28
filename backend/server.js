@@ -4,6 +4,7 @@ const express = require('express');
 const corsSetup = require('./middleware/corsSetup'); // Importujemy naszą konfigurację CORS
 const app = express();
 const contactRoute = require('./routes/contact');
+const path = require('path');
 
 // Middleware do CORS
 app.use(corsSetup); // Zastosowanie konfiguracji CORS w całej aplikacji
