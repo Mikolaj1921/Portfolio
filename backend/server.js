@@ -27,6 +27,15 @@ app.get('/', (req, res) => {
 // Trasa do kontaktu
 app.use('/contact', contactRoute);
 
+
+// Serwowanie plików statycznych z folderu 'build' (wynik builda React)
+app.use(express.static(path.join(__dirname, 'build')));
+
+// Obsługa wszystkich zapytań i zwracanie 'index.html', by React Router obsłużył routing
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 // Obsługa błędów
 
 // Obsługa błędów dla nieznanych tras (404)
