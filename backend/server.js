@@ -1,7 +1,6 @@
 require('dotenv').config(); // Wczytanie zmiennych środowiskowych z pliku .env
 const express = require('express');
 const corsSetup = require('./middleware/corsSetup'); // Importujemy naszą konfigurację CORS
-const path = require('path'); // Importujemy path
 const app = express();
 const contactRoute = require('./routes/contact');
 
@@ -27,14 +26,6 @@ app.get('/', (req, res) => {
 // Trasa do kontaktu
 app.use('/contact', contactRoute);
 
-// Serwowanie plików statycznych z folderu 'build' (wynik builda React)
-// Ścieżka do folderu 'build' w frontendzie
-app.use(express.static(path.join(__dirname, '../frontend/build')));
-
-// Obsługa wszystkich zapytań i zwracanie 'index.html', by React Router obsłużył routing
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
-});
 
 // Obsługa błędów
 
