@@ -1,43 +1,47 @@
-// server.js
-require('dotenv').config(); // Wczytanie zmiennych środowiskowych z pliku .env
+require('dotenv').config(); // Wczytanie zmiennych środowiskowych
 const express = require('express');
-const corsSetup = require('./middleware/corsSetup'); // Importujemy naszą konfigurację CORS
+const cors = require('cors');
+const corsSetup = require('./middleware/corsSetup'); // Import konfiguracji CORS
+const contactRoute = require('./routes/contact'); // Trasa kontaktu
+
 const app = express();
-const contactRoute = require('./routes/contact');
 
-// Middleware do CORS
-app.use(corsSetup); // Zastosowanie konfiguracji CORS w całej aplikacji
-
-// Logowanie żądań (przydatne do debugowania)
+// Middleware CORS z dodatkowym logowaniem dla debugowania
 app.use((req, res, next) => {
-  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+  const origin = req.headers.origin;
+  console.log(`[CORS Check] Origin: ${origin}`);
   next();
 });
+
+app.use(corsSetup); // Użycie konfiguracji CORS w całej aplikacji
 
 // Middleware do obsługi JSON
 app.use(express.json());
 
-// Endpointy
+// Logowanie wszystkich żądań HTTP (przydatne do debugowania)
+app.use((req, res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+  console.log('Nagłówki:', req.headers);
+  next();
+});
 
-// Prosta trasa
+// Trasa główna
 app.get('/', (req, res) => {
   res.send('Witaj na backendzie Node.js!');
 });
 
-// Trasa do kontaktu
+// Trasa kontaktowa
 app.use('/contact', contactRoute);
-
-// Obsługa błędów
 
 // Obsługa błędów dla nieznanych tras (404)
 app.use((req, res) => {
-  res.status(404).json({ error: "Nie znaleziono zasobu" });
+  res.status(404).json({ error: 'Nie znaleziono zasobu' });
 });
 
-// Logowanie błędów serwera (500)
+// Obsługa błędów serwera (500)
 app.use((err, req, res, next) => {
-  console.error("Błąd serwera:", err.stack);
-  res.status(500).json({ error: "Wewnętrzny błąd serwera" });
+  console.error('Błąd serwera:', err.stack);
+  res.status(500).json({ error: 'Wewnętrzny błąd serwera' });
 });
 
 // Uruchomienie serwera
