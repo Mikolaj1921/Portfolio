@@ -2,8 +2,7 @@
 
     padding: 20px;
     border-radius: 20px;
-    background-color: hsla(0, 0%, 17%, 0.75);
-    backdrop-filter: blur(5px);
+    background-color: #333;
 }
 /*cointainer for max768px*/
 
@@ -285,11 +284,12 @@
   .skills-carousel {
     animation: fadeInDownlow 1s ease-out forwards;
     width: 100%;
+    padding: 10px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-top: 40px;
+    margin-top: 30px;
     overflow: hidden;  /* Ukrywamy zawartość, która wychodzi poza kontener */
   }
   
@@ -310,7 +310,7 @@
   }
   
   .skill:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
   }
   
   .skill i {
@@ -445,6 +445,10 @@
     .container-information-about{
         display: grid;
     }
+
+    .skill:hover {
+        transform: scale(1.1);
+      }
 }
 
 @media (max-width: 620px){

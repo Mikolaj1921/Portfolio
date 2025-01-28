@@ -1,7 +1,6 @@
 /* Styl dla stopki */
 footer {
-    background-color: hsla(0, 0%, 17%, 0.75);
-    backdrop-filter: blur(10px);
+  background-color: #333;
     color: #fff;                 /* Kolor tekstu na biały */
     padding: 20px;               /* Odstępy wewnętrzne */
     text-align: center;          /* Wyrównanie tekstu do środka */
