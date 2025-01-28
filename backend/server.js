@@ -1,47 +1,43 @@
-require('dotenv').config(); // Wczytanie zmiennych środowiskowych
+// server.js
+require('dotenv').config(); // Wczytanie zmiennych środowiskowych z pliku .env
 const express = require('express');
-const cors = require('cors');
-const corsSetup = require('./middleware/corsSetup'); // Import konfiguracji CORS
-const contactRoute = require('./routes/contact'); // Trasa kontaktu
-
+const corsSetup = require('./middleware/corsSetup'); // Importujemy naszą konfigurację CORS
 const app = express();
+const contactRoute = require('./routes/contact');
 
-// Middleware CORS z dodatkowym logowaniem dla debugowania
+// Middleware do CORS
+app.use(corsSetup); // Zastosowanie konfiguracji CORS w całej aplikacji
+
+// Logowanie żądań (przydatne do debugowania)
 app.use((req, res, next) => {
-  const origin = req.headers.origin;
-  console.log(`[CORS Check] Origin: ${origin}`);
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
   next();
 });
-
-app.use(corsSetup); // Użycie konfiguracji CORS w całej aplikacji
 
 // Middleware do obsługi JSON
 app.use(express.json());
 
-// Logowanie wszystkich żądań HTTP (przydatne do debugowania)
-app.use((req, res, next) => {
-  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
-  console.log('Nagłówki:', req.headers);
-  next();
-});
+// Endpointy
 
-// Trasa główna
+// Prosta trasa
 app.get('/', (req, res) => {
   res.send('Witaj na backendzie Node.js!');
 });
 
-// Trasa kontaktowa
+// Trasa do kontaktu
 app.use('/contact', contactRoute);
+
+// Obsługa błędów
 
 // Obsługa błędów dla nieznanych tras (404)
 app.use((req, res) => {
-  res.status(404).json({ error: 'Nie znaleziono zasobu' });
+  res.status(404).json({ error: "Nie znaleziono zasobu" });
 });
 
-// Obsługa błędów serwera (500)
+// Logowanie błędów serwera (500)
 app.use((err, req, res, next) => {
-  console.error('Błąd serwera:', err.stack);
-  res.status(500).json({ error: 'Wewnętrzny błąd serwera' });
+  console.error("Błąd serwera:", err.stack);
+  res.status(500).json({ error: "Wewnętrzny błąd serwera" });
 });
 
 // Uruchomienie serwera
@@ -49,3 +45,5 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Serwer działa na http://localhost:${PORT}`);
 });
+
+

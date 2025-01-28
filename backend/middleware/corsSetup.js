@@ -1,21 +1,16 @@
+// middleware/corsSetup.js
 const cors = require('cors');
 
-// Pobranie dozwolonych domen z pliku .env
+// Pobranie dozwolonych domen z zmiennej środowiskowej
 const allowedOrigins = process.env.CORS_ALLOWED_ORIGINS
-  ? process.env.CORS_ALLOWED_ORIGINS.split(',')
-  : ['http://localhost:3000'];
+  ? process.env.CORS_ALLOWED_ORIGINS.split(',') // Jeśli zmienna istnieje, przekształcamy ją na tablicę
+  : ['http://localhost:3000']; // Domyślna domena, jeśli zmienna nie jest ustawiona
 
 const corsOptions = {
-  origin: (origin, callback) => {
-    // Sprawdzenie, czy żądanie pochodzi z dozwolonego źródła
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('CORS: Niedozwolony dostęp'));
-    }
-  },
-  methods: ['GET', 'POST', 'OPTIONS'], // Dozwolone metody HTTP
-  credentials: true, // Zezwalanie na ciasteczka
+  origin: allowedOrigins, // Adresy frontendowe z pliku .env lub domyślna wartość
+  methods: ['GET', 'POST'], // Dozwolone metody HTTP
+  credentials: true, // Umożliwia przesyłanie ciasteczek lub nagłówków autoryzacyjnych
 };
 
-module.exports = cors(corsOptions);
+module.exports = cors(corsOptions); // Eksportujemy konfigurację CORS
+
