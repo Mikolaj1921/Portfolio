@@ -1,10 +1,9 @@
-// server.js
 require('dotenv').config(); // Wczytanie zmiennych środowiskowych z pliku .env
 const express = require('express');
 const corsSetup = require('./middleware/corsSetup'); // Importujemy naszą konfigurację CORS
+const path = require('path'); // Importujemy path
 const app = express();
 const contactRoute = require('./routes/contact');
-const path = require('path');
 
 // Middleware do CORS
 app.use(corsSetup); // Zastosowanie konfiguracji CORS w całej aplikacji
@@ -28,13 +27,13 @@ app.get('/', (req, res) => {
 // Trasa do kontaktu
 app.use('/contact', contactRoute);
 
-
 // Serwowanie plików statycznych z folderu 'build' (wynik builda React)
-app.use(express.static(path.join(__dirname, 'build')));
+// Ścieżka do folderu 'build' w frontendzie
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 // Obsługa wszystkich zapytań i zwracanie 'index.html', by React Router obsłużył routing
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
 });
 
 // Obsługa błędów
@@ -55,5 +54,3 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Serwer działa na http://localhost:${PORT}`);
 });
-
-
