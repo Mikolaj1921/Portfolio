@@ -170,19 +170,19 @@
 
 
 .column-photo1{
-    background-image: url('../../assets/images/www.png');
+    background-image: url('../../assets/images/www.webp');
 }
 
 .column-photo2{
-    background-image: url('../../assets/images/react.png');
+    background-image: url('../../assets/images/react.webp');
 }
 
 .column-photo3{
-    background-image: url('../../assets/images/node.png');
+    background-image: url('../../assets/images/node.webp');
 }
 
 .column-photo4{
-    background-image: url('../../assets/images/database.png');
+    background-image: url('../../assets/images/database.webp');
 }
 
 .column-photo1, .column-photo2, .column-photo3, .column-photo4 {
@@ -320,7 +320,7 @@
   
   .skill p {
     font-size: 15px;
-    color: #666;
+    color: rgb(176, 176, 176);
   }
 
   

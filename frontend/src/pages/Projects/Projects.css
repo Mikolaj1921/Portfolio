@@ -91,32 +91,32 @@
 }
 
 .column-pt1{
-    background-image: url('../../assets/images/project1.png');
+    background-image: url('../../assets/images/project1.webp');
 }
 .column-pt1:hover{
-    background-image: url('../../assets/images/project1_blur.png');
+    background-image: url('../../assets/images/project1_blur.webp');
 }
 
 .column-pt2{
-    background-image: url('../../assets/images/project2.png');
+    background-image: url('../../assets/images/project2.webp');
 }
 
 .column-pt2:hover{
-    background-image: url('../../assets/images/project2_blur.png');
+    background-image: url('../../assets/images/project2_blur.webp');
 }
 
 .column-pt3{
-    background-image: url('../../assets/images/project3.png');
+    background-image: url('../../assets/images/project3.webp');
 }
 .column-pt3:hover{
-    background-image: url('../../assets/images/project3_blur.png');
+    background-image: url('../../assets/images/project3_blur.webp');
 }
 
 .column-pt4{
-    background-image: url('../../assets/images/project4.png');
+    background-image: url('../../assets/images/project4.webp');
 }
 .column-pt4:hover{
-    background-image: url('../../assets/images/project4_blur.png');
+    background-image: url('../../assets/images/project4_blur.webp');
 }
 
 

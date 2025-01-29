@@ -68,11 +68,11 @@
   
 
 .column-pht1{
-  background-image: url('../../assets/images/mail.png');
+  background-image: url('../../assets/images/mail.webp');
 }
 
 .column-pht2{
-  background-image: url('../../assets/images/telephone.png');
+  background-image: url('../../assets/images/telephone.webp');
 }
 
 .clickable-area {
@@ -83,11 +83,11 @@
 }
 
 .column-pht3{
-  background-image: url('../../assets/images/location.png');
+  background-image: url('../../assets/images/location.webp');
 }
 
 .column-pht4{
-  background-image: url('../../assets/images/graduation.png');
+  background-image: url('../../assets/images/graduation.webp');
 }
 
 .column-pht1,.column-pht2,.column-pht3,.column-pht4{
@@ -182,10 +182,7 @@
     background-color: #333;
     backdrop-filter: none;
   }
-  
 }
-
-
 
   
 @media (max-width: 768px){

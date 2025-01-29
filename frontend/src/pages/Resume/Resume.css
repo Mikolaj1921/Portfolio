@@ -71,7 +71,7 @@
 }
 
 .col_photo1{
-    background-image: url('../../assets/images/university.png');
+    background-image: url('../../assets/images/university.webp');
     transition: 0.8s all ease;
 }
 .col_photo1:hover{
@@ -88,7 +88,7 @@
 }
 
 .col_photo2{
-    background-image: url('../../assets/images/school.png');
+    background-image: url('../../assets/images/school.webp');
     transition: 0.8s all ease;
 }
 .col_photo2:hover{
@@ -98,7 +98,7 @@
 .col_photo3{
     width: 120px;
     height: 120px;
-    background-image: url('../../assets/images/suntrail.png');
+    background-image: url('../../assets/images/suntrail.webp');
     transition: 0.8s all ease;
 }
 .col_photo3:hover{
@@ -108,7 +108,7 @@
 .col_photo4{
     width: 95px;
     height: 95px;
-    background-image: url('../../assets/images/slodkachwila.png');
+    background-image: url('../../assets/images/slodkachwila.webp');
     transition: 0.8s all ease;
 }
 .col_photo4:hover{
@@ -118,7 +118,7 @@
 .col_photo5{
     width: 105px;
     height: 105px;
-    background-image: url('../../assets/images/nauczajka.png');
+    background-image: url('../../assets/images/nauczajka.webp');
     transition: 0.8s all ease;
 }
 .col_photo5:hover{
@@ -129,7 +129,7 @@
     margin-top: 30px;
     width: 95px;
     height: 95px;
-    background-image: url('../../assets/images/projects.png');
+    background-image: url('../../assets/images/projects.webp');
     transition: 0.8s all ease;
 }
 .col_photo6:hover{
@@ -140,7 +140,7 @@
     margin-top: 30px;
     width: 95px;
     height: 95px;
-    background-image: url('../../assets/images/chat.png');
+    background-image: url('../../assets/images/chat.webp');
     transition: 0.8s all ease;
 }
 .col_photo7:hover{
@@ -337,31 +337,31 @@
 }
 
 .min-image-skill1{
-    background-image: url('../../assets/images/html.png');
+    background-image: url('../../assets/images/html.webp');
 }
 .min-image-skill2{
-    background-image: url('../../assets/images/css.png');
+    background-image: url('../../assets/images/css.webp');
 }
 .min-image-skill3{
-    background-image: url('../../assets/images/javascript.png');
+    background-image: url('../../assets/images/javascript.webp');
 }
 .min-image-skill4{
-    background-image: url('../../assets/images/react.png');
+    background-image: url('../../assets/images/react.webp');
 }
 .min-image-skill5{
-    background-image: url('../../assets/images/node.png');
+    background-image: url('../../assets/images/node.webp');
 }
 .min-image-skill6{
-    background-image: url('../../assets/images/expressjs.png');
+    background-image: url('../../assets/images/expressjs.webp');
 }
 .min-image-skill7{
-    background-image: url('../../assets/images/postgres.png');
+    background-image: url('../../assets/images/postgres.webp');
 }
 .min-image-skill8{
-    background-image: url('../../assets/images/git.png');
+    background-image: url('../../assets/images/git.webp');
 }
 .min-image-skill9{
-    background-image: url('../../assets/images/github.png');
+    background-image: url('../../assets/images/github.webp');
 }
 
 
