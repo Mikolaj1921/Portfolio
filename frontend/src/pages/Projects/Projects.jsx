@@ -1,29 +1,9 @@
-import React,{useEffect} from "react";
+import React from "react";
 import { Helmet } from 'react-helmet-async';
 import './Projects.css';
 import '../Animation.css'
 
 const Projects = () => {
-
-        useEffect(() => {
-            // Tablica ścieżek do obrazów
-            const imagePaths = [
-              require('../../assets/images/project1.webp'),
-              require('../../assets/images/project1_blur.webp'),
-              require('../../assets/images/project2.webp'),
-              require('../../assets/images/project2_blur.webp'),
-              require('../../assets/images/project3.webp'),
-              require('../../assets/images/project3_blur.webp'),
-              require('../../assets/images/project4.webp'),
-              require('../../assets/images/project4_blur.webp')
-            ];
-        
-            // Preładowanie obrazów w pętli
-            imagePaths.forEach((path) => {
-              const preloadImage = new Image();
-              preloadImage.src = path;
-            });
-        }, []);
 
     return(
         <>

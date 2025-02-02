@@ -45,7 +45,7 @@ const Resume = () => {
         <>
             <Helmet>
                 <html lang="pl" />
-                <title>Projekty - Portfolio Web Developera</title>
+                <title>Resume - Portfolio Web Developera</title>
                 <meta 
                     name="description" 
                     content="Sprawdź moje portfolio web developera, w tym doświadczenie zawodowe w React, Node.js, C#, oraz projekty związane z tworzeniem aplikacji webowych i systemów. Zobacz moje umiejętności programistyczne, osiągnięcia i edukację." 

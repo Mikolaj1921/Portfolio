@@ -11,26 +11,25 @@ const About = () => {
 
     useEffect(() => {
         // Tablica ścieżek do obrazów
-        const imagePaths = [
-          require('../../assets/images/www.webp'),
-          require('../../assets/images/react.webp'),
-          require('../../assets/images/node.webp'),
-          require('../../assets/images/database.webp'),
-          require('../../assets/images/project1.webp'),
-          require('../../assets/images/project1_blur.webp'),
-          require('../../assets/images/project2.webp'),
-          require('../../assets/images/project2_blur.webp'),
-          require('../../assets/images/project3.webp'),
-          require('../../assets/images/project3_blur.webp'),
-          require('../../assets/images/project4.webp'),
-          require('../../assets/images/project4_blur.webp')
+        const imageNames = [
+            'awatar.jpg','mail.webp','telephone.webp','location.webp','graduation.webp','www.webp',
+            'react.webp','node.webp','database.webp','project1.webp','project1_blur.webp',
+            'project2.webp','project2_blur.webp','project3.webp','project3_blur.webp',
+            'project4.webp','project4_blur.webp','university.webp','school.webp','suntrail.webp',
+            'slodkachwila.webp','html.webp','css.webp','javascript.webp','react.webp',
+            'node.webp','expressjs.webp','postgres.webp','git.webp','github.webp','nauczajka.webp',
+            'projects.webp','chat.webp'
         ];
+        // Dynamiczne tworzenie pełnych ścieżek do obrazów
+        const imagePaths = imageNames.map(name => require(`../../assets/images/${name}`));
+        
     
         // Preładowanie obrazów w pętli
         imagePaths.forEach((path) => {
           const preloadImage = new Image();
           preloadImage.src = path;
         });
+
     }, []);
 
     const nr_tel = '+48888508630';

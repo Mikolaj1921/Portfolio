@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Aside.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -6,23 +6,6 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 const Aside = () => {
   
   const nr_tel = '+48888508630';
-
-  useEffect(() => {
-    // Tablica ścieżek do obrazów
-    const imagePaths = [
-      require('../../assets/images/awatar.jpg'),
-      require('../../assets/images/mail.webp'),
-      require('../../assets/images/telephone.webp'),
-      require('../../assets/images/location.webp'),
-      require('../../assets/images/graduation.webp')
-    ];
-
-    // Preładowanie obrazów w pętli
-    imagePaths.forEach((path) => {
-      const preloadImage = new Image();
-      preloadImage.src = path;
-    });
-  }, []);
 
   return (
     <aside className="Aside">
