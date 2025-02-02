@@ -2,6 +2,8 @@
 node_modules/
 
 
+portfolio_fix.docx/
+
 # Ignoruj pliki i foldery tworzone przez npm
 npm-debug.log
 package-lock.json
