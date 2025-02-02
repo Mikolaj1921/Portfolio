@@ -2,6 +2,7 @@ require('dotenv').config(); // Wczytanie zmiennych środowiskowych z pliku .env
 const express = require('express');
 const corsSetup = require('./middleware/corsSetup'); // Importujemy naszą konfigurację CORS
 const app = express();
+const path = require('path');
 const contactRoute = require('./routes/contact');
 
 // Middleware do CORS
@@ -25,6 +26,13 @@ app.get('/', (req, res) => {
 
 // Trasa do kontaktu
 app.use('/contact', contactRoute);
+
+
+// Trasa do pliku sitemap.xml
+app.get('/sitemap.xml', (req, res) => {
+  res.type('application/xml'); // Встановлюємо MIME тип як application/xml
+  res.sendFile(path.join(__dirname, 'sitemap.xml')); // Відправляємо файл sitemap.xml
+});
 
 
 // Obsługa błędów
