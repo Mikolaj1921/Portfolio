@@ -15,7 +15,15 @@ const About = () => {
           require('../../assets/images/www.webp'),
           require('../../assets/images/react.webp'),
           require('../../assets/images/node.webp'),
-          require('../../assets/images/database.webp')
+          require('../../assets/images/database.webp'),
+          require('../../assets/images/project1.webp'),
+          require('../../assets/images/project1_blur.webp'),
+          require('../../assets/images/project2.webp'),
+          require('../../assets/images/project2_blur.webp'),
+          require('../../assets/images/project3.webp'),
+          require('../../assets/images/project3_blur.webp'),
+          require('../../assets/images/project4.webp'),
+          require('../../assets/images/project4_blur.webp')
         ];
     
         // Preładowanie obrazów w pętli
