@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './About.css';
 import '../Animation.css'
 import { Helmet } from 'react-helmet-async';
@@ -9,19 +9,35 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const About = () => {
 
+    useEffect(() => {
+        // Tablica ścieżek do obrazów
+        const imagePaths = [
+          require('../../assets/images/www.webp'),
+          require('../../assets/images/react.webp'),
+          require('../../assets/images/node.webp'),
+          require('../../assets/images/database.webp')
+        ];
+    
+        // Preładowanie obrazów w pętli
+        imagePaths.forEach((path) => {
+          const preloadImage = new Image();
+          preloadImage.src = path;
+        });
+    }, []);
+
     const nr_tel = '+48888508630';
-  // Lista umiejętności i ikon
-  const skills = [
-    { icon: 'devicon-react-original colored', name: 'React.js' },
-    { icon: 'devicon-nodejs-plain colored', name: 'Node.js' },
-    { icon: 'devicon-postgresql-plain colored', name: 'PostgreSQL' },
-    { icon: 'devicon-tailwindcss-plain colored', name: 'Tailwind CSS' },
-    { icon: 'devicon-html5-plain colored', name: 'HTML5' },
-    { icon: 'devicon-css3-plain colored', name: 'CSS3' },
-    { icon: 'devicon-javascript-plain colored', name: 'JavaScript' },
-    { icon: 'devicon-git-plain colored', name: 'Git' },
-    { icon: 'devicon-github-original colored', name: 'GitHub' },
-    ];
+    // Lista umiejętności i ikon
+    const skills = [
+        { icon: 'devicon-react-original colored', name: 'React.js' },
+        { icon: 'devicon-nodejs-plain colored', name: 'Node.js' },
+        { icon: 'devicon-postgresql-plain colored', name: 'PostgreSQL' },
+        { icon: 'devicon-tailwindcss-plain colored', name: 'Tailwind CSS' },
+        { icon: 'devicon-html5-plain colored', name: 'HTML5' },
+        { icon: 'devicon-css3-plain colored', name: 'CSS3' },
+        { icon: 'devicon-javascript-plain colored', name: 'JavaScript' },
+        { icon: 'devicon-git-plain colored', name: 'Git' },
+        { icon: 'devicon-github-original colored', name: 'GitHub' },
+        ];
 
   return (
     <>

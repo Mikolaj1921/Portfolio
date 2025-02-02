@@ -8,8 +8,20 @@ const Aside = () => {
   const nr_tel = '+48888508630';
 
   useEffect(() => {
-    const preloadImage = new Image();
-    preloadImage.src = require('../../assets/images/awatar.jpg');
+    // Tablica ścieżek do obrazów
+    const imagePaths = [
+      require('../../assets/images/awatar.jpg'),
+      require('../../assets/images/mail.webp'),
+      require('../../assets/images/telephone.webp'),
+      require('../../assets/images/location.webp'),
+      require('../../assets/images/graduation.webp')
+    ];
+
+    // Preładowanie obrazów w pętli
+    imagePaths.forEach((path) => {
+      const preloadImage = new Image();
+      preloadImage.src = path;
+    });
   }, []);
 
   return (
