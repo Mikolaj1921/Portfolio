@@ -55,7 +55,7 @@ const About = () => {
             name="description"
             content="Poznaj mnie bliżej jako web developera. Specjalizuję się w React.js, Node.js..."
             />
-            <meta name="keywords" content="about me, resume, web developer, portfolio, React, Node.js, C#, front-end, back-end, JavaScript, HTML, CSS, PostgreSQL" />
+            <meta name="keywords" content="about me, resume, mikolaj, melnyk, web developer, portfolio, React, Node.js, C#, front-end, back-end, JavaScript, HTML, CSS, PostgreSQL" />
             <meta property="og:title" content="O mnie - Portfolio Frontend Developera" />
             <meta property="og:description" content="Buduję responsywne aplikacje w React.js i Node.js. Poznaj moje umiejętności i zainteresowania." />
             <meta property="og:type" content="website" />
