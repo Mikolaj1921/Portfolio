@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import About from './pages/About/About';  
-import Contact from './pages/Contact/Contact';
-import Projects from './pages/Projects/Projects';
-import Resume from './pages/Resume/Resume';
+import About from './pages/About/About.jsx';
+import Contact from './pages/Contact/Contact.jsx';
+import Projects from './pages/Projects/Projects.jsx';
+import Resume from './pages/Resume/Resume.jsx';
 
 const Routing = () => {
   return (
@@ -13,7 +13,7 @@ const Routing = () => {
       <Route path="/" element={<About />} />
       <Route path="/Contact" element={<Contact />} />
       <Route path="/Projects" element={<Projects />} />
-      <Route path="/Resume" element={<Resume/>} />
+      <Route path="/Resume" element={<Resume />} />
 
     </Routes>
   );
