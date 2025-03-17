@@ -24,7 +24,7 @@
     "react-particles": "^2.12.0",
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
-    "three": "^0.137.0",
+    "three": "^0.174.0",
     "tsparticles": "^2.12.0"
   },
   "scripts": {
@@ -73,19 +73,16 @@
     "lint-staged": "^15.5.0",
     "prettier": "^3.5.3"
   },
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
-  },
   "prettier": {
     "semi": true,
     "singleQuote": true,
     "trailingComma": "es5",
     "tabWidth": 2
   },
-  "husky": {
-    "hooks": {}
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
