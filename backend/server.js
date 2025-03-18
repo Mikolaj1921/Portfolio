@@ -1,12 +1,14 @@
 require('dotenv').config(); // Wczytanie zmiennych środowiskowych z pliku .env
+
 const express = require('express');
 const corsSetup = require('./middleware/corsSetup'); // Importujemy naszą konfigurację CORS
 const app = express();
 const path = require('path');
 const contactRoute = require('./routes/contact');
+const contactBlog = require('./routes/blog');
 
 // Middleware do CORS
-app.use(corsSetup); // Zastosowanie konfiguracji CORS w całej aplikacji
+app.use(corsSetup);
 
 // Logowanie żądań (przydatne do debugowania)
 app.use((req, res, next) => {
@@ -26,6 +28,7 @@ app.get('/', (req, res) => {
 
 // Trasa do kontaktu
 app.use('/contact', contactRoute);
+app.use('/blog', contactBlog);
 
 // Trasa do pliku sitemap.xml
 app.get('/sitemap.xml', (req, res) => {

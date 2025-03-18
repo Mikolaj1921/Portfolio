@@ -15,9 +15,6 @@ export default [
       n: pluginNode, // Wtyczka dla Node.js
       react: pluginReact, // Wtyczka dla React
     },
-    rules: {
-      'prettier/prettier': 'error', // Reguła wymuszająca formatowanie Prettier
-    },
   },
 
   // 🔹 Konfiguracja dla backendu (Node.js + Express)
