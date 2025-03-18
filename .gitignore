@@ -1,6 +1,7 @@
 # Ignoruj foldery node_modules w całym repozytorium
 frontend/node_modules/
 backend/node_modules/
+node_modules/
 
 portfolio_fix.docx/
 
