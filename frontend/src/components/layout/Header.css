@@ -31,7 +31,9 @@
   margin-left: 20px;
   padding: 10px 16px;
   border-radius: 5px;
-  transition: background-color 0.3s ease, text-decoration 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    text-decoration 0.3s ease;
 }
 
 .Header nav a.active {
@@ -47,7 +49,6 @@
 .menu-icon {
   display: none; /* Domyślnie ukryta */
   cursor: pointer;
-
 }
 
 /* Boczne menu */
@@ -67,10 +68,9 @@
   padding: 50px 0px;
 }
 
-
 .side-menu a {
   text-decoration: none;
-  margin: 5px 10px ;
+  margin: 5px 10px;
   border-radius: 5px;
 }
 
@@ -82,16 +82,15 @@
   background-color: #444;
 }
 
-
-
-.line-,.status,.avatar {
-  margin-left: auto; 
+.line-,
+.status,
+.avatar {
+  margin-left: auto;
   margin-right: auto;
 }
 
-
 .social-icons-p {
-  margin: 10px auto; 
+  margin: 10px auto;
 }
 
 /* Stylizacja listy */
@@ -107,23 +106,22 @@
   padding: 0%;
   margin: 10px;
   text-decoration: none;
-  color: #DE5F00;
+  color: #de5f00;
   font-size: 1.3rem;
-  transition: color 0.3s ease, transform 0.3s ease; 
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 @media (max-width: 1200px) {
-  .Header{
+  .Header {
     background-color: #333;
     backdrop-filter: none;
   }
 }
 
-
-
 /* Przycisk menu dla małych ekranów */
 @media (max-width: 768px) {
-
   .menu-icon {
     display: block; /* Pokazujemy przycisk na małych ekranach */
   }
@@ -132,15 +130,13 @@
     margin-left: 0%;
   }
 
-  
-
-  .side-menu{
+  .side-menu {
     display: flex;
     width: 40%;
     align-items: center;
   }
 
-  .side-menu.open{
+  .side-menu.open {
     animation: fadeInRight-menu 1s ease-out forwards;
     right: 0;
     display: flex;
@@ -151,18 +147,17 @@
     animation: fadeInLeft-menu 1s ease-out forwards; /* Animacja przy zamykaniu */
   }
 
-
   .Header nav {
     display: none; /* Ukrywamy nawigację w trybie poziomym */
   }
 }
 
-@media(max-width: 480px){
-  .side-menu{
+@media (max-width: 480px) {
+  .side-menu {
     width: 50%;
   }
 
-  .name-surname{
+  .name-surname {
     width: 90%;
   }
 }

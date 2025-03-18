@@ -1,25 +1,25 @@
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
-import "./Resume.css";
-import "../Animation.css";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import './Resume.css';
+import '../Animation.css';
+import { Link } from 'react-router-dom';
 
 const Resume = () => {
   const [languageLevels] = useState({
-    polish: "C2", // Polski - C2
-    english: "B2", // Angielski - B2
-    ukrainian: "C2", // Ukraiński - A2
-    russian: "B2", // Rosyjski - B1
+    polish: 'C2', // Polski - C2
+    english: 'B2', // Angielski - B2
+    ukrainian: 'C2', // Ukraiński - A2
+    russian: 'B2', // Rosyjski - B1
   });
 
   // Funkcja do obliczenia, które segmenty mają być pomarańczowe, a które szare
   const getLevelColor = (level) => {
-    const levels = ["A1", "A2", "B1", "B2", "C1", "C2"];
+    const levels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
     if (!levels.includes(level)) {
-      level = "A1"; // Domyślny poziom, jeśli nie znaleziono
+      level = 'A1'; // Domyślny poziom, jeśli nie znaleziono
     }
     const levelIndex = levels.indexOf(level);
-    return levels.map((_, index) => (index <= levelIndex ? "orange" : "gray"));
+    return levels.map((_, index) => (index <= levelIndex ? 'orange' : 'gray'));
   };
 
   // Funkcja renderująca pasek postępu dla każdego języka
@@ -71,12 +71,11 @@ const Resume = () => {
             <h2 className="subtitle_r">Edukacja</h2>
             <div className="education-item">
               <div className="col_photo1">
-                {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-                <a
+                <div
                   href="https://weii.prz.edu.pl/"
                   target="_blank"
                   rel="noopener noreferrer"
-                ></a>
+                ></div>
               </div>
               <div className="col_text">
                 <h3 className="subsubtitle_r">
@@ -105,12 +104,11 @@ const Resume = () => {
 
             <div className="education-item">
               <div className="col_photo2">
-                {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-                <a
+                <div
                   href="https://most3.licey.org.ua/"
                   target="_blank"
                   rel="noopener noreferrer"
-                ></a>
+                ></div>
               </div>
               <div className="col_text">
                 <h3 className="subsubtitle_r">
@@ -155,12 +153,11 @@ const Resume = () => {
                 </p>
               </div>
               <div className="col_photo3">
-                {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-                <a
+                <div
                   href="https://w.prz.edu.pl/uczelnia/aktualnosci/suntrail-pierwszy-spin-off-w-ramach-politechniki-rzeszowskiej-2371.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                ></a>
+                ></div>
               </div>
             </div>
 
@@ -169,7 +166,7 @@ const Resume = () => {
                 <h3 className="subsubtitle_r">Słodka Chwila</h3>
                 <span className="date_r"> 2024 — 2025</span>
                 <p>
-                  W ramach projektu "Słodka Chwila" stworzyłem stronę wizytówkę
+                  W ramach projektu Słodka Chwil stworzyłem stronę wizytówkę
                   cukierni, która zapewnia użytkownikom szybki dostęp do
                   kluczowych informacji, takich jak menu, aktualności, kontakt
                   oraz formularz wiadomości.
@@ -187,12 +184,11 @@ const Resume = () => {
                 </p>
               </div>
               <div className="col_photo4">
-                {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-                <a
+                <div
                   href="https://slodkachwila.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                ></a>
+                ></div>
               </div>
             </div>
           </section>
@@ -201,27 +197,26 @@ const Resume = () => {
             <h2 className="subtitle_r">Osiągnięcia</h2>
             <div className="col_3_achievement">
               <div className="col_photo5">
-                {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-                <a
+                <div
                   href="https://zsz.prz.edu.pl/dzialalnosc-naukowa/projekty"
                   target="_blank"
                   rel="noopener noreferrer"
-                ></a>
+                ></div>
               </div>
               <div className="col_text">
                 <h3 className="subsubtitle_r">Nauczajka</h3>
                 <span className="date_r">2023 - 2024</span>
                 <p>
-                  Brałem udział w projekcie "Nauczajka", który zdobył 1. miejsce
-                  w konkursie VIA Express do sukcesu w lipcu 2023 roku. Projekt
+                  Brałem udział w projekcie Nauczajka, który zdobył 1. miejsce w
+                  konkursie VIA Express do sukcesu w lipcu 2023 roku. Projekt
                   polegał na stworzeniu aplikacji edukacyjnej wspierającej
                   proces korepetycji, która miała na celu pomoc uczniom oraz
                   studentom w organizacji nauki.
                 </p>
                 <p>
-                  W ramach działalności studenckiej, projekt "Nauczajka" nie
-                  tylko zyskał uznanie w konkursie, ale także umożliwił mi
-                  rozwój w zakresie zarządzania projektem, pracy zespołowej oraz
+                  W ramach działalności studenckiej, projekt Nauczajka nie tylko
+                  zyskał uznanie w konkursie, ale także umożliwił mi rozwój w
+                  zakresie zarządzania projektem, pracy zespołowej oraz
                   tworzenia aplikacji webowych. Dzięki zaangażowaniu całego
                   zespołu udało się zaprezentować innowacyjne rozwiązanie, które
                   znalazło pozytywne opinie.

@@ -61,36 +61,105 @@ const Header = () => {
           <div className="menu-icon" onClick={toggleMenu}>
             <FaBars size={30} color="white" /> {/* Ikona hamburgera */}
           </div>
-          
-            <nav ref={sideMenuRef} className={`side-menu ${isMenuOpen ? 'open' : ''} ${isClosing ? 'close' : ''}`}>
-              <div className='avatar'></div>
-              <h1 className='name-surname'>Mikołaj Melnyk</h1>
-              <h2 className='status'>Web Developer</h2>
-              <div className='line-'></div>
 
-              <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleMenu}>About me</NavLink>
-              <NavLink to="/Projects" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleMenu}>Projects</NavLink>
-              <NavLink to="/Resume" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleMenu}>Resume</NavLink>
-              <NavLink to="/Contact" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleMenu}>Contact</NavLink>
+          <nav
+            ref={sideMenuRef}
+            className={`side-menu ${isMenuOpen ? 'open' : ''} ${isClosing ? 'close' : ''}`}
+          >
+            <div className="avatar"></div>
+            <h1 className="name-surname">Mikołaj Melnyk</h1>
+            <h2 className="status">Web Developer</h2>
+            <div className="line-"></div>
 
-              <div className='line-'></div>
-              <div className="social-icons-p">
-                <ul>
-                  <li><a href="https://www.instagram.com/melnikmikolai/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram"></i></a></li>
-                  <li><a href="https://www.linkedin.com/in/miko%C5%82aj-melnyk-634213335/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin"></i></a></li>
-                  <li><a href="https://discord.com/users/mykolaymelnyk/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-discord"></i></a></li>
-                </ul>
-              </div>
-            </nav>
-          
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+              onClick={toggleMenu}
+            >
+              About me
+            </NavLink>
+            <NavLink
+              to="/Projects"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+              onClick={toggleMenu}
+            >
+              Projects
+            </NavLink>
+            <NavLink
+              to="/Resume"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+              onClick={toggleMenu}
+            >
+              Resume
+            </NavLink>
+            <NavLink
+              to="/Contact"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+              onClick={toggleMenu}
+            >
+              Contact
+            </NavLink>
 
+            <div className="line-"></div>
+            <div className="social-icons-p">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.instagram.com/melnikmikolai/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/miko%C5%82aj-melnyk-634213335/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fa-brands fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://discord.com/users/mykolaymelnyk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fa-brands fa-discord"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </>
       ) : (
         <nav>
-          <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>About me</NavLink>
-          <NavLink to="/Projects" className={({ isActive }) => isActive ? 'active' : ''}>Projects</NavLink>
-          <NavLink to="/Resume" className={({ isActive }) => isActive ? 'active' : ''}>Resume</NavLink>
-          <NavLink to="/Contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            About me
+          </NavLink>
+          <NavLink
+            to="/Projects"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Projects
+          </NavLink>
+          <NavLink
+            to="/Resume"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Resume
+          </NavLink>
+          <NavLink
+            to="/Contact"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Contact
+          </NavLink>
         </nav>
       )}
     </header>

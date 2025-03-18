@@ -27,25 +27,23 @@ app.get('/', (req, res) => {
 // Trasa do kontaktu
 app.use('/contact', contactRoute);
 
-
 // Trasa do pliku sitemap.xml
 app.get('/sitemap.xml', (req, res) => {
   res.type('application/xml'); // Встановлюємо MIME тип як application/xml
   res.sendFile(path.join(__dirname, 'sitemap.xml')); // Відправляємо файл sitemap.xml
 });
 
-
 // Obsługa błędów
 
 // Obsługa błędów dla nieznanych tras (404)
 app.use((req, res) => {
-  res.status(404).json({ error: "Nie znaleziono zasobu" });
+  res.status(404).json({ error: 'Nie znaleziono zasobu' });
 });
 
 // Logowanie błędów serwera (500)
 app.use((err, req, res, next) => {
-  console.error("Błąd serwera:", err.stack);
-  res.status(500).json({ error: "Wewnętrzny błąd serwera" });
+  console.error('Błąd serwera:', err.stack);
+  res.status(500).json({ error: 'Wewnętrzny błąd serwera' });
 });
 
 // Uruchomienie serwera

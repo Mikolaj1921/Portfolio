@@ -1,7 +1,7 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import "./Projects.css";
-import "../Animation.css";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import './Projects.css';
+import '../Animation.css';
 
 const Projects = () => {
   return (

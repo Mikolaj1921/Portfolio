@@ -1,72 +1,99 @@
-import React, { useEffect } from "react";
-import "./About.css";
-import "../Animation.css";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import React, { useEffect } from 'react';
+import './About.css';
+import '../Animation.css';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+
+// Manually import all images
+import awatar from '../../assets/images/awatar.jpg';
+import mail from '../../assets/images/mail.webp';
+import telephone from '../../assets/images/telephone.webp';
+import location from '../../assets/images/location.webp';
+import graduation from '../../assets/images/graduation.webp';
+import www from '../../assets/images/www.webp';
+import reactImage from '../../assets/images/react.webp';
+import nodeImage from '../../assets/images/node.webp';
+import database from '../../assets/images/database.webp';
+import project1 from '../../assets/images/project1.webp';
+import project1Blur from '../../assets/images/project1_blur.webp';
+import project2 from '../../assets/images/project2.webp';
+import project2Blur from '../../assets/images/project2_blur.webp';
+import project3 from '../../assets/images/project3.webp';
+import project3Blur from '../../assets/images/project3_blur.webp';
+import project4 from '../../assets/images/project4.webp';
+import project4Blur from '../../assets/images/project4_blur.webp';
+import university from '../../assets/images/university.webp';
+import school from '../../assets/images/school.webp';
+import suntrail from '../../assets/images/suntrail.webp';
+import slodkachwila from '../../assets/images/slodkachwila.webp';
+import html from '../../assets/images/html.webp';
+import css from '../../assets/images/css.webp';
+import javascript from '../../assets/images/javascript.webp';
+import expressjs from '../../assets/images/expressjs.webp';
+import postgres from '../../assets/images/postgres.webp';
+import git from '../../assets/images/git.webp';
+import github from '../../assets/images/github.webp';
+import nauczajka from '../../assets/images/nauczajka.webp';
+import projects from '../../assets/images/projects.webp';
+import chat from '../../assets/images/chat.webp';
 
 const About = () => {
   useEffect(() => {
-    // Tablica ścieżek do obrazów
-    const imageNames = [
-      "awatar.jpg",
-      "mail.webp",
-      "telephone.webp",
-      "location.webp",
-      "graduation.webp",
-      "www.webp",
-      "react.webp",
-      "node.webp",
-      "database.webp",
-      "project1.webp",
-      "project1_blur.webp",
-      "project2.webp",
-      "project2_blur.webp",
-      "project3.webp",
-      "project3_blur.webp",
-      "project4.webp",
-      "project4_blur.webp",
-      "university.webp",
-      "school.webp",
-      "suntrail.webp",
-      "slodkachwila.webp",
-      "html.webp",
-      "css.webp",
-      "javascript.webp",
-      "react.webp",
-      "node.webp",
-      "expressjs.webp",
-      "postgres.webp",
-      "git.webp",
-      "github.webp",
-      "nauczajka.webp",
-      "projects.webp",
-      "chat.webp",
+    // List of all imported images
+    const imagePaths = [
+      awatar,
+      mail,
+      telephone,
+      location,
+      graduation,
+      www,
+      reactImage,
+      nodeImage,
+      database,
+      project1,
+      project1Blur,
+      project2,
+      project2Blur,
+      project3,
+      project3Blur,
+      project4,
+      project4Blur,
+      university,
+      school,
+      suntrail,
+      slodkachwila,
+      html,
+      css,
+      javascript,
+      expressjs,
+      postgres,
+      git,
+      github,
+      nauczajka,
+      projects,
+      chat,
     ];
-    // Dynamiczne tworzenie pełnych ścieżek do obrazów
-    const imagePaths = imageNames.map((name) =>
-      require(`../../assets/images/${name}`)
-    );
 
-    // Preładowanie obrazów w pętli
+    // Preload images
     imagePaths.forEach((path) => {
       const preloadImage = new Image();
       preloadImage.src = path;
     });
   }, []);
 
-  const nr_tel = "+48888508630";
+  const nr_tel = '+48888508630';
   // Lista umiejętności i ikon
   const skills = [
-    { icon: "devicon-react-original colored", name: "React.js" },
-    { icon: "devicon-nodejs-plain colored", name: "Node.js" },
-    { icon: "devicon-postgresql-plain colored", name: "PostgreSQL" },
-    { icon: "devicon-tailwindcss-plain colored", name: "Tailwind CSS" },
-    { icon: "devicon-html5-plain colored", name: "HTML5" },
-    { icon: "devicon-css3-plain colored", name: "CSS3" },
-    { icon: "devicon-javascript-plain colored", name: "JavaScript" },
-    { icon: "devicon-git-plain colored", name: "Git" },
-    { icon: "devicon-github-original colored", name: "GitHub" },
+    { icon: 'devicon-react-original colored', name: 'React.js' },
+    { icon: 'devicon-nodejs-plain colored', name: 'Node.js' },
+    { icon: 'devicon-postgresql-plain colored', name: 'PostgreSQL' },
+    { icon: 'devicon-tailwindcss-plain colored', name: 'Tailwind CSS' },
+    { icon: 'devicon-html5-plain colored', name: 'HTML5' },
+    { icon: 'devicon-css3-plain colored', name: 'CSS3' },
+    { icon: 'devicon-javascript-plain colored', name: 'JavaScript' },
+    { icon: 'devicon-git-plain colored', name: 'Git' },
+    { icon: 'devicon-github-original colored', name: 'GitHub' },
   ];
 
   return (
@@ -339,12 +366,11 @@ const About = () => {
         <div className="container-information-about">
           <div className="info-about">
             <div className="column-pht1">
-              {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-              <a
+              <div
                 href="https://mail.google.com/mail/u/0/#inbox?compose=new"
                 target="_blank"
                 rel="noopener noreferrer"
-              ></a>
+              ></div>
             </div>
             <div className="column-txt">
               <h3 className="title">Email:</h3>
@@ -366,12 +392,11 @@ const About = () => {
 
           <div className="info-about">
             <div className="column-pht3">
-              {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-              <a
+              <div
                 href="https://maps.app.goo.gl/w2bqvvJfdKjTWNGJ8"
                 target="_blank"
                 rel="noopener noreferrer"
-              ></a>
+              ></div>
             </div>
             <div className="column-txt">
               <h3 className="title">Lokalizacja:</h3>
@@ -381,12 +406,11 @@ const About = () => {
 
           <div className="info-about">
             <div className="column-pht4">
-              {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-              <a
+              <div
                 href="https://w.prz.edu.pl/"
                 target="_blank"
                 rel="noopener noreferrer"
-              ></a>
+              ></div>
             </div>
             <div className="column-txt">
               <h3 className="title">Uczelnia:</h3>

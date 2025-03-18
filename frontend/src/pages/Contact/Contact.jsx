@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import L from "leaflet";
-import { Helmet } from "react-helmet-async";
-import "leaflet/dist/leaflet.css";
-import "./Contact.css";
-import "../Animation.css";
+import React, { useState } from 'react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
+import { Helmet } from 'react-helmet-async';
+import 'leaflet/dist/leaflet.css';
+import './Contact.css';
+import '../Animation.css';
 
 // Definiowanie niestandardowej ikony
 const customIcon = new L.Icon({
-  iconUrl: "https://cdn-icons-png.flaticon.com/512/252/252025.png",
+  iconUrl: 'https://cdn-icons-png.flaticon.com/512/252/252025.png',
   iconSize: [40, 40],
   iconAnchor: [20, 40],
   popupAnchor: [0, -40],
@@ -19,9 +19,9 @@ const apiUrl =
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -38,9 +38,9 @@ const Contact = () => {
 
     try {
       const response = await fetch(`${apiUrl}/contact`, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
@@ -49,21 +49,21 @@ const Contact = () => {
         setIsSubmitted(true); // Formularz wysłany pomyślnie
 
         // Reset formularza
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: '', email: '', message: '' });
 
         // Zniknięcie komunikatu po 3 sekundach
         setTimeout(() => {
           setIsSubmitted(false);
         });
 
-        alert("Wiadomość została wysłana!");
+        alert('Wiadomość została wysłana!');
       } else {
         setIsSubmitted(false);
-        alert("Wystąpił błąd. Spróbuj ponownie.");
+        alert('Wystąpił błąd. Spróbuj ponownie.');
       }
     } catch (error) {
-      console.error("Błąd przy wysyłaniu wiadomości:", error);
-      alert("Wystąpił błąd. Spróbuj ponownie.");
+      console.error('Błąd przy wysyłaniu wiadomości:', error);
+      alert('Wystąpił błąd. Spróbuj ponownie.');
     }
   };
 
@@ -153,7 +153,7 @@ const Contact = () => {
           <MapContainer
             center={[50.020179, 21.982613]}
             zoom={15}
-            style={{ height: "500px", width: "100%" }}
+            style={{ height: '500px', width: '100%' }}
           >
             <TileLayer
               url="https://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/{z}/{x}/{y}{r}.png"

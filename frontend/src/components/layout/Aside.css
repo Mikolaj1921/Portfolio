@@ -1,77 +1,77 @@
 .Aside {
-    background-color: #333;
-    padding: 20px;               
-    border-radius: 30px;
-    margin-left: 10px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border: 0px solid #333; 
-  }
-  
-  .avatar {
-    background-image: url('../../assets/images/awatar.jpg');
-    background-size: cover; /* Dopasowanie obrazu do kontenera, bez rozciągania */
-    background-position: center; /* Wycentrowanie obrazu */
-    background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
-    height: clamp(120px, 10vw, 150px); /* Zmiana 0.5vw na 10vw, by była bardziej zauważalna */
-    width: clamp(110px, 10vw, 140px); /* Szerokość na 66% szerokości kontenera */
-    border-radius: 20px; /* Zaokrąglone rogi */
-    justify-self: center;
-    display: block; /* Zapewnia elastyczność, jeśli trzeba */
-  }
-  
+  background-color: #333;
+  padding: 20px;
+  border-radius: 30px;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 0px solid #333;
+}
 
-  .name-surname {
-    text-align: center;
-    color: #dbdbdb;
-    font-size: clamp(1.4rem, 0.5vw, 1.6rem);
-    margin-bottom: 20px;
-  }
+.avatar {
+  background-image: url('../../assets/images/awatar.jpg');
+  background-size: cover; /* Dopasowanie obrazu do kontenera, bez rozciągania */
+  background-position: center; /* Wycentrowanie obrazu */
+  background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
+  height: clamp(
+    120px,
+    10vw,
+    150px
+  ); /* Zmiana 0.5vw na 10vw, by była bardziej zauważalna */
+  width: clamp(110px, 10vw, 140px); /* Szerokość na 66% szerokości kontenera */
+  border-radius: 20px; /* Zaokrąglone rogi */
+  justify-self: center;
+  display: block; /* Zapewnia elastyczność, jeśli trzeba */
+}
 
-  .status{
-    box-shadow: 2.5px 2.5px 10px rgba(0, 0, 0, 0.304);
-    text-align: center;
-    color: #dbdbdb;
-    font-size: clamp(0.9rem, 0.5vw, 1rem);
-    border-radius: 20px;
-    padding: 5px;
-    justify-self: center;
-    width: 70%;
-    background-color: #2a2a2a;
-    margin-bottom: 20px;
-  }
-  
-  .Aside ul {
-    list-style-type: none;         /* Usunięcie punktów listy */
-    padding: 0;
-  }
-  
+.name-surname {
+  text-align: center;
+  color: #dbdbdb;
+  font-size: clamp(1.4rem, 0.5vw, 1.6rem);
+  margin-bottom: 20px;
+}
 
-  .line- {
-    justify-self: center;
-    background-color: #404040;
-    border-radius: 20px;
-    height: 2px;
-    width: clamp(80%, 20%, 100%);
-    margin-bottom: 10px;
-  }
+.status {
+  box-shadow: 2.5px 2.5px 10px rgba(0, 0, 0, 0.304);
+  text-align: center;
+  color: #dbdbdb;
+  font-size: clamp(0.9rem, 0.5vw, 1rem);
+  border-radius: 20px;
+  padding: 5px;
+  justify-self: center;
+  width: 70%;
+  background-color: #2a2a2a;
+  margin-bottom: 20px;
+}
 
+.Aside ul {
+  list-style-type: none; /* Usunięcie punktów listy */
+  padding: 0;
+}
+
+.line- {
+  justify-self: center;
+  background-color: #404040;
+  border-radius: 20px;
+  height: 2px;
+  width: clamp(80%, 20%, 100%);
+  margin-bottom: 10px;
+}
 
 .info {
-    margin-top: 5px;
-    display: grid;
-    grid-template-columns: 20% 80%; /* Pierwsza kolumna: 20%, druga: 80% */
-    gap: 20px;                             /* Odstępy między elementami */
-    color: white;
-    justify-content: space-between;
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 20% 80%; /* Pierwsza kolumna: 20%, druga: 80% */
+  gap: 20px; /* Odstępy między elementami */
+  color: white;
+  justify-content: space-between;
 }
-  
 
-.column-pht1{
+.column-pht1 {
   background-image: url('../../assets/images/mail.webp');
 }
 
-.column-pht2{
+.column-pht2 {
   background-image: url('../../assets/images/telephone.webp');
 }
 
@@ -82,28 +82,33 @@
   cursor: pointer;
 }
 
-.column-pht3{
+.column-pht3 {
   background-image: url('../../assets/images/location.webp');
 }
 
-.column-pht4{
+.column-pht4 {
   background-image: url('../../assets/images/graduation.webp');
 }
 
-.column-pht1,.column-pht2,.column-pht3,.column-pht4{
+.column-pht1,
+.column-pht2,
+.column-pht3,
+.column-pht4 {
   justify-self: center;
   align-self: center;
-  background-size: cover;  /* Dopasowanie obrazu do kontenera, bez rozciągania */
-  background-position: center;  /* Wycentrowanie obrazu */
+  background-size: cover; /* Dopasowanie obrazu do kontenera, bez rozciągania */
+  background-position: center; /* Wycentrowanie obrazu */
   background-repeat: no-repeat; /* Zapobieganie powtarzaniu obrazu */
   width: 35px;
   height: 35px;
   margin-top: 5px;
   transition: 0.7s all ease;
-
 }
 
-.column-pht1 a,.column-pht2 a,.column-pht3 a,.column-pht4 a{
+.column-pht1 a,
+.column-pht2 a,
+.column-pht3 a,
+.column-pht4 a {
   position: absolute; /* Link obejmuje cały kontener */
   top: 0;
   left: 0;
@@ -113,22 +118,23 @@
   text-decoration: none; /* Usunięcie domyślnego podkreślenia */
 }
 
-.column-pht1:hover,.column-pht2:hover,.column-pht3:hover,.column-pht4:hover{
+.column-pht1:hover,
+.column-pht2:hover,
+.column-pht3:hover,
+.column-pht4:hover {
   transform: scale(1.15);
 }
 
 .title {
   font-size: 1rem;
-  margin-bottom: 7px;  /* Zmniejszenie odstępu między tytułem a tekstem */
+  margin-bottom: 7px; /* Zmniejszenie odstępu między tytułem a tekstem */
 }
 
 .text {
   font-size: clamp(0.7rem, 0.5vw, 0.75rem);
   width: 90%;
-  margin-top: 0;  /* Zmniejszenie marginesu górnego, jeśli jest ustawiony */
+  margin-top: 0; /* Zmniejszenie marginesu górnego, jeśli jest ustawiony */
 }
-
-
 
 .social-icon {
   display: grid; /* Flexbox dla elastycznego rozmieszczenia elementów */
@@ -151,15 +157,16 @@
 
 .social-icon ul li a {
   text-decoration: none;
-  color: #DE5F00;
+  color: #de5f00;
   font-size: 2rem;
-  transition: color 0.3s ease, transform 0.3s ease; 
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .social-icon ul li a:hover {
-  color: #dbdbdb; 
+  color: #dbdbdb;
 }
-
 
 @media (max-width: 1600px) {
   /* Zmiana układu dla .info, aby elementy były w jednej kolumnie */
@@ -177,16 +184,15 @@
   }
 }
 
-@media(max-width: 1200px){
+@media (max-width: 1200px) {
   .Aside {
     background-color: #333;
     backdrop-filter: none;
   }
 }
 
-  
-@media (max-width: 768px){
-  .Aside{
+@media (max-width: 768px) {
+  .Aside {
     display: none;
   }
 }

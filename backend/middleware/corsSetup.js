@@ -13,4 +13,3 @@ const corsOptions = {
 };
 
 module.exports = cors(corsOptions); // Eksportujemy konfigurację CORS
-
