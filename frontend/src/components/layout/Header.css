@@ -70,8 +70,12 @@
 
 .side-menu a {
   text-decoration: none;
-  margin: 5px 10px;
+  margin: 4px 10px;
   border-radius: 5px;
+}
+
+.side-menu a:last-of-type {
+  margin-bottom: 10px;
 }
 
 .side-menu a.active {
@@ -124,6 +128,18 @@
 @media (max-width: 768px) {
   .menu-icon {
     display: block; /* Pokazujemy przycisk na małych ekranach */
+  }
+
+  .name-surname {
+    margin: 10px 10px 0px;
+  }
+
+  .status {
+    margin: 0;
+  }
+
+  .Header nav {
+    padding: 6% 0px;
   }
 
   .Header nav a {
