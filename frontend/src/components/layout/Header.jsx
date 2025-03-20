@@ -99,6 +99,13 @@ const Header = () => {
             >
               Contact
             </NavLink>
+            <NavLink
+              to="/Blog"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+              onClick={toggleMenu}
+            >
+              Blog
+            </NavLink>
 
             <div className="line-"></div>
             <div className="social-icons-p">
@@ -159,6 +166,12 @@ const Header = () => {
             className={({ isActive }) => (isActive ? 'active' : '')}
           >
             Contact
+          </NavLink>
+          <NavLink
+            to="/Blog"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Blog
           </NavLink>
         </nav>
       )}

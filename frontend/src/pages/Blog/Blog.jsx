@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import './Blog.css';
+import '../Animation.css';
 
 const Blog = () => {
+  const description = 'ss';
+
   return (
     <>
       <Helmet>
@@ -29,10 +33,24 @@ const Blog = () => {
       </Helmet>
 
       <div className="blog-container">
-        <h1 className="title_h1">Blog</h1>
-        <div className="line"></div>
+        <div className="contentblog">
+          <h1 className="title_h1">Blog</h1>
+          <div className="line"></div>
+          <h2 className="subtitle_r">Aktualności</h2>
 
-        <section className="section-blog"></section>
+          <div className="blog-item">
+            <div className="title-post"> First post</div>
+            <div className="subtitle-post">This is a subtitle of this post</div>
+            <div className="image-post"></div>
+            <div className="description"> {description} </div>
+          </div>
+        </div>
+
+        <div className="aside-contentblog">
+          <div className="title-aside-r">
+            <h1>Co nowego?</h1>
+          </div>
+        </div>
       </div>
     </>
   );
