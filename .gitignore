@@ -4,6 +4,7 @@ backend/node_modules/
 node_modules/
 
 backend/.env
+frontend/.env
 
 portfolio_fix.docx/
 
