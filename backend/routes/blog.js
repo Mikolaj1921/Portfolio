@@ -5,7 +5,7 @@ const router = express.Router();
 //method get from data db
 router.get('/dataget', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM post');
+    const result = await pool.query('SELECT opis FROM post');
     res.json(result.rows);
   } catch (err) {
     console.error(err.stack);
