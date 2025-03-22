@@ -1,24 +1,25 @@
-import React, { useState  , useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import axios from "axios";
+import axios from 'axios';
 import './Blog.css';
 import '../Animation.css';
 
 const Blog = () => {
-  const [blog , setBlog] = useState([]); 
+  //state for post
+  const [blog, setBlog] = useState([]);
+  //connection bd dataget
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/blog/dataget"); 
+        const response = await axios.get('http://localhost:5000/blog/dataget');
         setBlog(response.data);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error);
       }
     };
 
     fetchData();
   }, []);
-
 
   return (
     <>
@@ -52,9 +53,11 @@ const Blog = () => {
           <div className="line"></div>
           <h2 className="subtitle_r">Aktualności</h2>
 
+          <button className="adminPanel">AdmPanel</button>
+
           {blog.length > 0 ? (
-            blog.map((post) => (
-              <div  className="blog-item">
+            blog.map((post, index) => (
+              <div key={index} className="blog-item">
                 <div className="title-post">Post</div>
                 <div className="subtitle-post">Opis posta:</div>
                 <div className="image-post"></div>
@@ -62,7 +65,7 @@ const Blog = () => {
               </div>
             ))
           ) : (
-            <p>Ładowanie danych...</p>
+            <div>Brak postów</div>
           )}
         </div>
 

@@ -7,9 +7,15 @@ import pluginNode from 'eslint-plugin-n';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  // 🔹 Globalna konfiguracja z Prettier
+  // Globalna konfiguracja z Prettier
   {
-    ignores: ['frontend/build/**'], // Ignoruj katalog build
+    ignores: [
+      '**/node_modules/*',
+      '**/build/*',
+      '**/dist/*',
+      '**/public/*',
+      '**/*.min.js',
+    ],
     plugins: {
       prettier: pluginPrettier, // Wtyczka Prettier
       n: pluginNode, // Wtyczka dla Node.js
@@ -17,7 +23,7 @@ export default [
     },
   },
 
-  // 🔹 Konfiguracja dla backendu (Node.js + Express)
+  // Konfiguracja dla backendu (Node.js + Express)
   {
     files: ['backend/**/*.js'],
     languageOptions: {
@@ -30,7 +36,7 @@ export default [
     },
   },
 
-  // 🔹 Konfiguracja dla frontendu (React)
+  // Konfiguracja dla frontendu (React)
   {
     files: ['frontend/src/**/*.{js,jsx}'],
     languageOptions: {
@@ -46,6 +52,6 @@ export default [
     },
   },
 
-  // 🔹 Wyłączenie reguł ESLint kolidujących z Prettier
+  // Wyłączenie reguł ESLint kolidujących z Prettier
   configPrettier,
 ];
